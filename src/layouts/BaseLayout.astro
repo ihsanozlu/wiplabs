@@ -1,6 +1,6 @@
 ---
-import { Analytics } from '@vercel/analytics/astro';
-import { SpeedInsights } from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 const { title = "WIPLabs", description = "Apps for real-world problems, built by a DevOps engineer who codes at night." } = Astro.props;
 ---
 
@@ -278,5 +278,7 @@ const { title = "WIPLabs", description = "Apps for real-world problems, built by
       toggle.textContent = next === 'dark' ? '☀️' : '🌙';
     });
   </script>
+  <Analytics />
+  <SpeedInsights />
 </body>
 </html>
