@@ -2,7 +2,7 @@
 
 Built with [Astro](https://astro.build). Static site for app publishing, privacy policies, and personal brand of İhsan Özlü.
 
-🌐 Live at: [wiplabs.app](https://wiplabs.app) *(coming soon)*
+🌐 Live at: [wiplabs.app](https://wiplabs.app)
 
 ## 🚀 Getting Started
 
