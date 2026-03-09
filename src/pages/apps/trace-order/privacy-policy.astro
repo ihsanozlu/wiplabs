@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const appName = "Trace Order";
+const lastUpdated = "March 2025";
+const contactEmail = "hello@wiplabs.app";
+---
+
+<BaseLayout title={`Privacy Policy — ${appName}`} description={`Privacy Policy for ${appName} by WIPLabs.`}>
+  <style>
+    .policy-page { padding: 4rem 0; max-width: 720px; }
+    .policy-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
+    .policy-page h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; color: var(--text); }
+    .policy-page p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page a { color: var(--accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--text); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+
+  <div class="container">
+    <div class="policy-page">
+      <a href="/apps/trace-order" class="back-link">← Back to {appName}</a>
+      <h1>Privacy Policy</h1>
+      <p class="meta">{appName} · WIPLabs · Last updated: {lastUpdated}</p>
+
+      <hr />
+
+      <h2>1. Overview</h2>
+      <p>
+        This Privacy Policy explains how WIPLabs ("we", "our", or "us") collects, uses, and protects
+        information when you use the {appName} mobile application ("the App").
+        We are committed to protecting your privacy and being transparent about our data practices.
+      </p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We may collect the following types of information:</p>
+      <ul>
+        <li><strong>Information you provide:</strong> Order details, business information, and any data you enter into the app.</li>
+        <li><strong>Device information:</strong> Device type, operating system version, and app version for troubleshooting purposes.</li>
+        <li><strong>Usage data:</strong> How you interact with the app to help us improve the experience.</li>
+      </ul>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and maintain the App's functionality</li>
+        <li>Improve and optimize the App</li>
+        <li>Respond to support requests</li>
+        <li>Fix bugs and technical issues</li>
+      </ul>
+
+      <h2>4. Data Storage</h2>
+      <p>
+        Your data is stored locally on your device. We do not transmit your order or business
+        data to our servers unless explicitly stated within the app.
+      </p>
+
+      <h2>5. Third-Party Services</h2>
+      <p>
+        The App may use third-party services such as analytics tools. These services have their
+        own privacy policies and may collect data as described in their respective policies.
+      </p>
+
+      <h2>6. Data Retention</h2>
+      <p>
+        We retain your data only as long as necessary to provide the service. You may delete
+        your data at any time from within the App settings.
+      </p>
+
+      <h2>7. Children's Privacy</h2>
+      <p>
+        The App is not intended for children under 13 years of age. We do not knowingly
+        collect personal information from children under 13.
+      </p>
+
+      <h2>8. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data</li>
+        <li>Withdraw consent at any time</li>
+      </ul>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will notify you of any changes
+        by updating the "Last updated" date at the top of this page.
+      </p>
+
+      <h2>10. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at:
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

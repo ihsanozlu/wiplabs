@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const appName = "Bade Daily List";
+const lastUpdated = "March 2025";
+const contactEmail = "hello@wiplabs.app";
+---
+
+<BaseLayout title={`Privacy Policy — ${appName}`} description={`Privacy Policy for ${appName} by WIPLabs.`}>
+  <style>
+    .policy-page { padding: 4rem 0; max-width: 720px; }
+    .policy-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
+    .policy-page h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; color: var(--text); }
+    .policy-page p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page a { color: var(--accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--text); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+
+  <div class="container">
+    <div class="policy-page">
+      <a href="/apps/bade-daily-list" class="back-link">← Back to {appName}</a>
+      <h1>Privacy Policy</h1>
+      <p class="meta">{appName} · WIPLabs · Last updated: {lastUpdated}</p>
+
+      <hr />
+
+      <h2>1. Overview</h2>
+      <p>
+        This Privacy Policy explains how WIPLabs ("we", "our", or "us") handles information
+        in connection with the {appName} mobile application ("the App").
+        We are committed to protecting your privacy. This app does not collect personal data.
+      </p>
+
+      <h2>2. Data We Collect</h2>
+      <p>
+        <strong>We do not collect any personal data.</strong> All product and list data you
+        create within the app is stored locally on your device only. Nothing is transmitted
+        to our servers.
+      </p>
+
+      <h2>3. Local Storage Only</h2>
+      <p>
+        All data entered into {appName} — including product names and daily lists — is stored
+        exclusively on your device. If you delete the app, all data is permanently removed.
+        We have no access to this data at any point.
+      </p>
+
+      <h2>4. Third-Party Services</h2>
+      <p>
+        The App does not use any third-party analytics, advertising, or tracking services.
+      </p>
+
+      <h2>5. Children's Privacy</h2>
+      <p>
+        The App is not directed at children under 13 years of age. We do not knowingly
+        collect any information from children under 13.
+      </p>
+
+      <h2>6. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be reflected
+        by updating the "Last updated" date above.
+      </p>
+
+      <h2>7. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at:
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

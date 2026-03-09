@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { apps } from '../data/apps.js';
+---
+
+<BaseLayout title="Support" description="Get support for WIPLabs apps.">
+  <style>
+    .support-page { padding: 4rem 0; }
+    .support-page h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .support-page > .subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 480px; }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .support-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+    }
+
+    .support-card h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .support-card p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .support-card a.btn { display: inline-flex; }
+
+    .faq-section { margin-top: 3rem; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+    }
+
+    .faq-q { font-family: 'Syne', sans-serif; font-weight: 600; margin-bottom: 0.5rem; }
+    .faq-a { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+
+    .app-support-list { margin-top: 3rem; }
+    .app-support-list h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+    .app-support-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .app-support-name { font-weight: 600; font-family: 'Syne', sans-serif; }
+    .app-support-links { display: flex; gap: 0.75rem; }
+    .app-support-link { font-size: 0.82rem; color: var(--accent); font-weight: 600; }
+
+    @media (max-width: 640px) {
+      .support-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="container">
+    <div class="support-page">
+      <h1>Support</h1>
+      <p class="subtitle">Need help with one of our apps? We're here.</p>
+
+      <div class="support-grid">
+        <div class="support-card">
+          <h2>📧 Email Support</h2>
+          <p>Send us an email and we'll get back to you as soon as possible. Usually within 24–48 hours.</p>
+          <a href="mailto:hello@wiplabs.app" class="btn btn-primary">hello@wiplabs.app</a>
+        </div>
+        <div class="support-card">
+          <h2>🔒 Privacy Policies</h2>
+          <p>Looking for privacy policy or data deletion info for a specific app? Find it below.</p>
+          <a href="#app-policies" class="btn btn-outline">Jump to app policies ↓</a>
+        </div>
+      </div>
+
+      <!-- APP POLICIES -->
+      <div class="app-support-list" id="app-policies">
+        <h2>App policies & support</h2>
+        {apps.map(app => (
+          <div class="app-support-item">
+            <span class="app-support-name">{app.name}</span>
+            <div class="app-support-links">
+              <a href={`/apps/${app.slug}/privacy-policy`} class="app-support-link">Privacy Policy</a>
+              {app.hasDataDeletion && (
+                <a href={`/apps/${app.slug}/data-deletion`} class="app-support-link">Data Deletion</a>
+              )}
+              <a href={`/apps/${app.slug}`} class="app-support-link">App page →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <div class="faq-q">How do I request deletion of my data?</div>
+          <div class="faq-a">Email us at hello@wiplabs.app with your request and the app name. We'll process it within 30 days.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">I found a bug. How do I report it?</div>
+          <div class="faq-a">Email us with a description of the issue, your device model, and OS version. Screenshots help a lot.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Where are WIPLabs apps available?</div>
+          <div class="faq-a">Currently on iOS (App Store). Android is in progress — Trace Order for Android is in closed testing and launching soon.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Who is behind WIPLabs?</div>
+          <div class="faq-a">WIPLabs is an indie app studio founded by İhsan Özlü, a Senior DevOps Engineer based in Istanbul, Turkey.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

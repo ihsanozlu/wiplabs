@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="About İhsan Özlü — Senior DevOps Engineer and indie app developer behind WIPLabs.">
+  <style>
+    .about-page { padding: 4rem 0; }
+
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: start;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 2px solid var(--accent);
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .profile-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-role {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .profile-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--accent);
+      border-radius: 5px;
+      font-family: 'Syne', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .profile-link:hover { background: var(--accent-dim); }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .content-section p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-group {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .skill-group-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: var(--bg-hover);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .about-hero { grid-template-columns: 1fr; }
+      .profile-card { display: none; }
+    }
+  </style>
+
+  <div class="container">
+    <div class="about-page">
+      <div class="about-hero">
+        <div>
+          <h1>Hi, I'm <span class="accent">İhsan.</span></h1>
+          <p>
+            Senior DevOps Engineer with 8+ years of experience in cloud infrastructure and Kubernetes.
+            I also build iOS and Android apps with SwiftUI and Kotlin — designing with MVVM architecture
+            and shipping things that actually work. Based in Istanbul, Turkey.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+            <a href="https://linkedin.com/in/ihsanozlu" target="_blank" class="btn btn-outline">LinkedIn</a>
+            <a href="https://github.com/ihsanozlu" target="_blank" class="btn btn-outline">GitHub</a>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <img src="/avatar.jpg" alt="İhsan Özlü" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" />
+          </div>
+          <div class="profile-name">İhsan Özlü</div>
+          <div class="profile-role">DevOps · SwiftUI · Kotlin</div>
+          <div class="profile-links">
+            <a href="mailto:hello@wiplabs.app" class="profile-link">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2>The day job</h2>
+        <p>
+          I'm a Senior DevOps Engineer currently working at Şanstech, managing hybrid infrastructure
+          across Azure, AWS, and on-premise Rancher environments. I work with Kubernetes (AKS, EKS, Rancher),
+          build Terraform IaC modules, and develop CI/CD pipelines with Azure DevOps and Jenkins.
+        </p>
+        <p>
+          Before that, I worked at Veloxity building data analytics pipelines with Databricks and PostgreSQL,
+          and at Pointr managing software infrastructure deployments.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>The side projects</h2>
+        <p>
+          WIPLabs is where I build mobile apps. It started with a practical need — helping a family
+          business track orders and operations — and grew into a bigger interest in building apps
+          that solve real everyday problems.
+        </p>
+        <p>
+          I'm a junior mobile developer in this space and I'm okay with that. The engineering discipline
+          from DevOps carries over — I care about reliability, clean structure, and shipping things that
+          actually work.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Beyond the keyboard</h2>
+        <p>
+          I grew up in Kayseri playing handball from a young age — and sport has been a constant
+          throughout my life. Basketball, tennis, badminton, football — if it involves moving,
+          I'm probably into it.
+        </p>
+        <p>
+          Last year I took that further and founded an amateur handball club in Kayseri. I was
+          everything at once — coach, player, logistics, planning, and funding. The club ran its
+          course and is no longer active, but building something from scratch with pure motivation
+          and no budget taught me more than I expected.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Technical skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-group-title">Cloud & Infra</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Rancher</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Containers</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">AKS</span>
+              <span class="skill-tag">EKS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">CI/CD</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure Devops</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">ArgoCD</span>
+              <span class="skill-tag">Ansible</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Golang</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Mobile</div>
+            <div class="skill-tags">
+              <span class="skill-tag">SwiftUI</span>
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">MVVM</span>
+              <span class="skill-tag">iOS</span>
+              <span class="skill-tag">Android</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
