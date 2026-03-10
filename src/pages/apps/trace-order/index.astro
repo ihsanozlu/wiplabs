@@ -98,11 +98,11 @@ const app = apps.find(a => a.slug === 'trace-order');
           <h1>{app.name}</h1>
           <p>{app.tagline}</p>
           <div class="app-cta">
-            {app.storeLinks.android && (
-              <a href={app.storeLinks.android} class="btn btn-primary" target="_blank">Google Play →</a>
-            )}
             {app.storeLinks.ios && (
-              <a href={app.storeLinks.ios} class="btn btn-outline" target="_blank">App Store →</a>
+              <a href={app.storeLinks.ios} class="btn btn-primary" target="_blank">App Store →</a>
+            )}
+            {app.storeLinks.android && (
+              <a href={app.storeLinks.android} class="btn btn-outline" target="_blank">Google Play →</a>
             )}
             {!app.storeLinks.android && !app.storeLinks.ios && (
               <span class="btn btn-outline" style="cursor: default; opacity: 0.6;">Store links coming soon</span>
