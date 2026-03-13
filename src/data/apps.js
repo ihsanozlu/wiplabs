@@ -7,11 +7,11 @@ export const apps = [
     tagline: "Simple order tracking & accounting for every business.",
     description:
       "A mobile app built for small businesses to track customer orders, delivery status, and front-end accounting operations. Available in Turkish, English, and Spanish. Built from real family business experience — designed to work for any business, not just one.",
-    platform: ["iOS", "Android (coming soon)"],
+    platform: ["iOS", "Android"],
     status: "live",
     storeLinks: {
       ios: "https://apps.apple.com/tr/app/siparis-takip/id6754329960",
-      android: "", // Add Play Store URL once published
+      android: "https://play.google.com/store/apps/details?id=com.ihsanozlu.badeorder",
     },
     appStoreId: "6754329960",
     appIcon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/12/9d/1c/129d1c35-b016-ddc0-6ce8-692917d7b0f1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
@@ -20,7 +20,7 @@ export const apps = [
     supportEmail: "hello@wiplabs.app",
     hasDataDeletion: false,
     icon: "/icons/trace-order.png",
-    note: "Android (Kotlin) version currently in closed testing — launching soon.",
+    note: "",
   },
   {
     slug: "bade-daily-list",
@@ -42,5 +42,26 @@ export const apps = [
     hasDataDeletion: false,
     icon: "/icons/bade-daily-list.png",
     note: "Built for Bade Pastanesi — a real family business tool.",
+  },
+  {
+    slug: "gratefuly",
+    name: "Gratefuly",
+    tagline: "",
+    description:
+      "",
+    platform: ["iOS","Android"],
+    status: "wip",
+    storeLinks: {
+      ios: "",
+      android: "",
+    },
+    appStoreId: "",
+    appIcon: "",
+    languages: ["English"],
+    version: "1.0",
+    supportEmail: "hello@wiplabs.app",
+    hasDataDeletion: false,
+    icon: "",
+    note: "",
   },
 ];

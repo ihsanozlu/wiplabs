@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps.js';
+const app = apps.find(a => a.slug === 'gratefuly');
+---
+
+<BaseLayout title={app.name} description={app.tagline}>
+  <style>
+    .app-hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-hero-inner {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .app-icon-large {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+
+    .app-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-hero p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+    }
+
+    .app-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+    .section h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .section p { color: var(--text-muted); line-height: 1.7; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+
+    .meta-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Syne', sans-serif; }
+    .meta-value { font-weight: 600; font-size: 0.95rem; }
+
+    .legal-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .legal-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'Syne', sans-serif;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .legal-link:hover { background: var(--accent-dim); }
+  </style>
+
+  <div class="container">
+    <div class="app-hero">
+      <div class="app-hero-inner">
+        <div class="app-icon-large">
+          {app.appIcon
+            ? <img src={app.appIcon} alt={app.name} style="width:100%;height:100%;border-radius:18px;object-fit:cover;" />
+            : <span>📦</span>
+          }
+        </div>
+        <div>
+          <div style="margin-bottom: 0.5rem;">
+            <span class={`badge ${app.status}`}>
+              {app.status === 'live' ? 'Live' : app.status === 'wip' ? 'WIP' : 'Coming Soon'}
+            </span>
+          </div>
+          <h1>{app.name}</h1>
+          <p>{app.tagline}</p>
+          <div class="app-cta">
+            {app.storeLinks.ios && (
+              <a href={app.storeLinks.ios} class="btn btn-primary" target="_blank">App Store →</a>
+            )}
+            {app.storeLinks.android && (
+              <a href={app.storeLinks.android} class="btn btn-outline" target="_blank">Google Play →</a>
+            )}
+            {!app.storeLinks.android && !app.storeLinks.ios && (
+              <span class="btn btn-outline" style="cursor: default; opacity: 0.6;">Store links coming soon</span>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>About this app</h2>
+      <p>{app.description}</p>
+    </section>
+
+    <section class="section">
+      <h2>App info</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Platform</div>
+          <div class="meta-value">{app.platform.join(', ')}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">{app.status === 'live' ? 'Available on App Store' : 'In Development'}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Languages</div>
+          <div class="meta-value">{app.languages.join(', ')}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Support</div>
+          <div class="meta-value">{app.supportEmail}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Publisher</div>
+          <div class="meta-value">WIPLabs</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Version</div>
+          <div class="meta-value">{app.version}</div>
+        </div>
+      </div>
+      {app.note && (
+        <div style="margin-top:1rem; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--accent); display: flex; gap: 0.5rem; align-items: center;">
+          <span>🔧</span><span>{app.note}</span>
+        </div>
+      )}
+    </section>
+
+    <section class="section">
+      <h2>Legal & Support</h2>
+      <p>Read our privacy policy, get support, or request data deletion.</p>
+      <div class="legal-links">
+        <a href={`/apps/${app.slug}/privacy-policy`} class="legal-link">Privacy Policy</a>
+        {app.hasDataDeletion && (
+          <a href={`/apps/${app.slug}/data-deletion`} class="legal-link">Data Deletion</a>
+        )}
+        <a href="/support" class="legal-link">Support</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
