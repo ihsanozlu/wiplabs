@@ -102,7 +102,7 @@ const app = apps.find(a => a.slug === 'trace-order');
               <a href={app.storeLinks.ios} class="btn btn-primary" target="_blank">App Store →</a>
             )}
             {app.storeLinks.android && (
-              <a href={app.storeLinks.android} class="btn btn-outline" target="_blank">Google Play →</a>
+                <a href={app.storeLinks.android} class="btn btn-primary" target="_blank">Google Play →</a>
             )}
             {!app.storeLinks.android && !app.storeLinks.ios && (
               <span class="btn btn-outline" style="cursor: default; opacity: 0.6;">Store links coming soon</span>
@@ -126,7 +126,7 @@ const app = apps.find(a => a.slug === 'trace-order');
         </div>
         <div class="meta-item">
           <div class="meta-label">Status</div>
-          <div class="meta-value">{app.status === 'live' ? 'Available on App Store' : 'In Development'}</div>
+          <div class="meta-value">{app.status === 'live' ? 'Available on App Store & Google Play' : 'In Development'}</div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Languages</div>
