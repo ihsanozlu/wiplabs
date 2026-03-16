@@ -8,7 +8,29 @@ const { title = "WIPLabs", description = "Apps for real-world problems, built by
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <meta name="author" content="İhsan Özlü" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+
+  <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="EvVqt5BxHEh-Fjwm5rOvqHL-Cz3wwSrvZjZNhQ6L-Vw" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content={`${title} — WIPLabs`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).toString()} />
+  <meta property="og:site_name" content="WIPLabs" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://wiplabs.app/avatar.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={`${title} — WIPLabs`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://wiplabs.app/avatar.jpg" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title} — WIPLabs</title>
