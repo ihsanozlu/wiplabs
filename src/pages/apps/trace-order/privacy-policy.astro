@@ -17,6 +17,18 @@ const contactEmail = "hello@wiplabs.app";
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--text); }
     hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
   </style>
 
   <div class="container">
@@ -27,70 +39,64 @@ const contactEmail = "hello@wiplabs.app";
 
       <hr />
 
-      <h2>1. Overview</h2>
+      <div class="highlight-box">
+        <span>🔒</span>
+        <span>Trace Order does not collect, store, or share any personal data from users or devices.</span>
+      </div>
+
+      <h2>1. About Trace Order</h2>
       <p>
-        This Privacy Policy explains how WIPLabs ("we", "our", or "us") collects, uses, and protects
-        information when you use the {appName} mobile application ("the App").
-        We are committed to protecting your privacy and being transparent about our data practices.
+        Trace Order is a simple order tracking and front-end accounting app designed for small
+        businesses of any size. It allows business owners and teams to create, manage, and track
+        customer orders — including order status, delivery tracking, and basic accounting operations.
+        The app is available in Turkish, English, and Spanish.
       </p>
 
-      <h2>2. Information We Collect</h2>
-      <p>We may collect the following types of information:</p>
+      <h2>2. Information We Do Not Collect</h2>
+      <p>
+        We do not collect, store, transmit, or share any personal data. This includes but is not limited to:
+      </p>
       <ul>
-        <li><strong>Information you provide:</strong> Order details, business information, and any data you enter into the app.</li>
-        <li><strong>Device information:</strong> Device type, operating system version, and app version for troubleshooting purposes.</li>
-        <li><strong>Usage data:</strong> How you interact with the app to help us improve the experience.</li>
+        <li>Personal identification information</li>
+        <li>Device identifiers or hardware information</li>
+        <li>Location data</li>
+        <li>Usage analytics or behavioral data</li>
+        <li>Contacts, camera, or any other device permissions</li>
       </ul>
 
-      <h2>3. How We Use Your Information</h2>
-      <p>We use the information we collect to:</p>
+      <h2>3. How the App Works</h2>
       <ul>
-        <li>Provide and maintain the App's functionality</li>
-        <li>Improve and optimize the App</li>
-        <li>Respond to support requests</li>
-        <li>Fix bugs and technical issues</li>
+        <li>All data you enter — orders, customers, notes — is stored locally on your device only.</li>
+        <li>Nothing is transmitted to external servers or third parties.</li>
+        <li>If you delete the app, all data is permanently removed from your device.</li>
+        <li>We have no access to your data at any point.</li>
       </ul>
 
-      <h2>4. Data Storage</h2>
+      <h2>4. Third-Party Services</h2>
       <p>
-        Your data is stored locally on your device. We do not transmit your order or business
-        data to our servers unless explicitly stated within the app.
+        Trace Order does not integrate with any third-party analytics, advertising, or tracking services.
       </p>
 
-      <h2>5. Third-Party Services</h2>
+      <h2>5. Data Security</h2>
       <p>
-        The App may use third-party services such as analytics tools. These services have their
-        own privacy policies and may collect data as described in their respective policies.
+        Since we do not collect or transmit any data, there are no security risks related to
+        data storage or processing on our end. Your data stays entirely on your device.
       </p>
 
-      <h2>6. Data Retention</h2>
+      <h2>6. Children's Privacy</h2>
       <p>
-        We retain your data only as long as necessary to provide the service. You may delete
-        your data at any time from within the App settings.
+        Trace Order is rated 4+ and is suitable for all ages. Since we do not collect
+        any personal data from any users, there are no special privacy concerns related
+        to younger users.
       </p>
 
-      <h2>7. Children's Privacy</h2>
+      <h2>7. Changes to This Policy</h2>
       <p>
-        The App is not intended for children under 13 years of age. We do not knowingly
-        collect personal information from children under 13.
+        We may update this Privacy Policy from time to time. Any changes will be reflected
+        by updating the "Last updated" date above.
       </p>
 
-      <h2>8. Your Rights</h2>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Access the personal data we hold about you</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your data</li>
-        <li>Withdraw consent at any time</li>
-      </ul>
-
-      <h2>9. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. We will notify you of any changes
-        by updating the "Last updated" date at the top of this page.
-      </p>
-
-      <h2>10. Contact Us</h2>
+      <h2>8. Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, please contact us at:
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>

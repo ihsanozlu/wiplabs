@@ -17,6 +17,18 @@ const contactEmail = "hello@wiplabs.app";
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--text); }
     hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
   </style>
 
   <div class="container">
@@ -27,45 +39,66 @@ const contactEmail = "hello@wiplabs.app";
 
       <hr />
 
-      <h2>1. Overview</h2>
+      <div class="highlight-box">
+        <span>🔒</span>
+        <span>Bade Daily List does not collect, store, or share any personal data from users or devices.</span>
+      </div>
+
+      <h2>1. About Bade Daily List</h2>
       <p>
-        This Privacy Policy explains how WIPLabs ("we", "our", or "us") handles information
-        in connection with the {appName} mobile application ("the App").
-        We are committed to protecting your privacy. This app does not collect personal data.
+        Bade Daily List is a simple productivity app that allows you to add products once
+        and generate a fresh daily list to share — via email, messaging apps, or any other
+        method you prefer. All data is created and managed entirely on your device.
       </p>
 
-      <h2>2. Data We Collect</h2>
+      <h2>2. Information We Do Not Collect</h2>
       <p>
-        <strong>We do not collect any personal data.</strong> All product and list data you
-        create within the app is stored locally on your device only. Nothing is transmitted
-        to our servers.
+        Our app does not collect, store, or share any personal data. We do not
+        track users, request personal information, or share data with third parties.
+        This includes:
       </p>
+      <ul>
+        <li>Personal identification information</li>
+        <li>Device identifiers or hardware information</li>
+        <li>Location data</li>
+        <li>Usage analytics or behavioral data</li>
+        <li>Contacts, camera, or any other device permissions</li>
+      </ul>
 
-      <h2>3. Local Storage Only</h2>
-      <p>
-        All data entered into {appName} — including product names and daily lists — is stored
-        exclusively on your device. If you delete the app, all data is permanently removed.
-        We have no access to this data at any point.
-      </p>
+      <h2>3. How the App Works</h2>
+      <ul>
+        <li>The app allows you to create product lists and generate shareable daily lists.</li>
+        <li>All data remains on your device and is not transmitted to external servers.</li>
+        <li>You may share your lists manually through your preferred sharing methods.</li>
+        <li>If you delete the app, all data is permanently removed from your device.</li>
+      </ul>
 
       <h2>4. Third-Party Services</h2>
       <p>
-        The App does not use any third-party analytics, advertising, or tracking services.
+        Bade Daily List does not integrate with any third-party analytics, advertising,
+        or tracking services.
       </p>
 
-      <h2>5. Children's Privacy</h2>
+      <h2>5. Data Security</h2>
       <p>
-        The App is not directed at children under 13 years of age. We do not knowingly
-        collect any information from children under 13.
+        Since we do not collect or transmit any data, there are no security risks related
+        to data storage or processing on our end. Your data stays entirely on your device.
       </p>
 
-      <h2>6. Changes to This Policy</h2>
+      <h2>6. Children's Privacy</h2>
       <p>
-        We may update this Privacy Policy from time to time. Any changes will be reflected
-        by updating the "Last updated" date above.
+        Bade Daily List is rated 4+ and is suitable for all ages. Since we do not collect
+        any personal data from any users, there are no special privacy concerns related
+        to younger users.
       </p>
 
-      <h2>7. Contact Us</h2>
+      <h2>7. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted
+        on this page with an updated date.
+      </p>
+
+      <h2>8. Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, please contact us at:
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
