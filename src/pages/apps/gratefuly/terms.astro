@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const appName     = "Gratefuly";
+const lastUpdated = "March 2026";
+const contactEmail = "hello@wiplabs.app";
+---
+
+<BaseLayout
+  title={`Terms of Use — ${appName}`}
+  description={`Terms of Use for ${appName} by WIPLabs.`}
+>
+  <style>
+    /* ── Hero ── */
+    .policy-hero {
+      background: linear-gradient(135deg, #5C8A6E, #7EC8A0);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .policy-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .policy-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* ── Page body ── */
+    .policy-page { padding: 4rem 0; max-width: 720px; }
+    .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
+    .policy-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--text);
+    }
+    .policy-page p  { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page a  { color: var(--accent); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+
+  <!-- Hero -->
+  <div class="policy-hero">
+    <span class="emoji">🌿</span>
+    <h1>Terms of Use</h1>
+    <p>Gratefuly — Daily Gratitude Journal</p>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="policy-page">
+      <a href="/apps/gratefuly" class="back-link">← Back to {appName}</a>
+
+      <p class="meta">{appName} · WIPLabs · Last updated: {lastUpdated}</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By downloading or using Gratefuly ("the App"), you agree to be bound by these
+        Terms of Use. If you do not agree to these terms, please do not use the App.
+        These terms apply to all users of the App.
+      </p>
+
+      <h2>2. Description of Service</h2>
+      <p>
+        Gratefuly is a personal journaling application that helps users practice gratitude
+        through daily prompts, mood tracking, and media attachments. The App stores all
+        user data locally on the user's device.
+      </p>
+
+      <h2>3. License</h2>
+      <p>
+        WIPLabs grants you a limited, non-exclusive, non-transferable, revocable license
+        to use the App for your personal, non-commercial purposes. You may not:
+      </p>
+      <ul>
+        <li>Copy, modify, or distribute the App</li>
+        <li>Reverse engineer or attempt to extract the source code</li>
+        <li>Use the App for any unlawful purpose</li>
+        <li>Sell, rent, or sublicense the App</li>
+      </ul>
+
+      <h2>4. Premium Subscriptions & In-App Purchases</h2>
+      <p>
+        Gratefuly offers optional premium features through in-app purchases processed by
+        Apple's App Store. The following terms apply to premium subscriptions:
+      </p>
+      <ul>
+        <li><strong>Monthly & Yearly subscriptions</strong> automatically renew unless cancelled at least 24 hours before the end of the current period.</li>
+        <li><strong>Lifetime purchase</strong> is a one-time payment granting permanent access to premium features.</li>
+        <li>Subscriptions can be managed and cancelled in your Apple ID account settings.</li>
+        <li>No refunds are provided for partial subscription periods unless required by applicable law.</li>
+        <li>Prices may change with notice provided through the App or App Store.</li>
+      </ul>
+
+      <h2>5. User Content</h2>
+      <p>
+        You retain full ownership of all content you create within the App, including journal
+        entries, photos, voice recordings, and videos. Since all content is stored locally
+        on your device, WIPLabs does not access, use, or claim any rights over your content.
+      </p>
+      <p>
+        You are responsible for maintaining backups of your data. WIPLabs is not responsible
+        for any loss of data resulting from device failure, loss, or deletion of the App.
+      </p>
+
+      <h2>6. Acceptable Use</h2>
+      <p>You agree to use Gratefuly only for lawful purposes. You must not use the App to:</p>
+      <ul>
+        <li>Store or share illegal content</li>
+        <li>Violate any applicable laws or regulations</li>
+        <li>Infringe on the rights of others</li>
+      </ul>
+
+      <h2>7. Advertising</h2>
+      <p>
+        The free version of Gratefuly displays advertisements through Google AdMob.
+        By using the free version, you agree to the display of ads. Premium subscribers
+        receive an ad-free experience.
+      </p>
+
+      <h2>8. Disclaimer of Warranties</h2>
+      <p>
+        The App is provided "as is" without warranties of any kind, express or implied.
+        WIPLabs does not warrant that the App will be uninterrupted, error-free, or free
+        of viruses or other harmful components. We do not warrant the accuracy or
+        completeness of any content within the App.
+      </p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by applicable law, WIPLabs shall not be liable for
+        any indirect, incidental, special, consequential, or punitive damages, including
+        loss of data, arising out of or related to your use of the App.
+      </p>
+
+      <h2>10. Termination</h2>
+      <p>
+        We reserve the right to discontinue the App or any of its features at any time.
+        You may stop using the App at any time by deleting it from your device.
+      </p>
+
+      <h2>11. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with applicable laws.
+        Any disputes arising from these Terms shall be subject to the exclusive jurisdiction
+        of the competent courts.
+      </p>
+
+      <h2>12. Changes to Terms</h2>
+      <p>
+        We may update these Terms of Use from time to time. Continued use of the App after
+        changes constitutes your acceptance of the new terms. We will update the "Last updated"
+        date at the top of this page when changes are made.
+      </p>
+
+      <h2>13. Contact Us</h2>
+      <p>
+        If you have any questions about these Terms of Use, please contact us at:
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+
+      <hr />
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        © 2026 WIP Labs · <a href="https://wiplabs.app">wiplabs.app</a>
+        · <a href="/apps/gratefuly/privacy-policy">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

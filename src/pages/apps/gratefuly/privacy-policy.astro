@@ -1,99 +1,192 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-const appName = "Trace Order";
-const lastUpdated = "March 2025";
+const appName     = "Gratefuly";
+const lastUpdated = "March 2026";
 const contactEmail = "hello@wiplabs.app";
 ---
 
-<BaseLayout title={`Privacy Policy — ${appName}`} description={`Privacy Policy for ${appName} by WIPLabs.`}>
+<BaseLayout
+  title={`Privacy Policy — ${appName}`}
+  description={`Privacy Policy for ${appName} by WIPLabs. Your journal stays private — everything stored on your device.`}
+>
   <style>
+    /* ── Hero ── */
+    .policy-hero {
+      background: linear-gradient(135deg, #5C8A6E, #7EC8A0);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .policy-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .policy-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* ── Page body ── */
     .policy-page { padding: 4rem 0; max-width: 720px; }
-    .policy-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
     .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
-    .policy-page h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; color: var(--text); }
-    .policy-page p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--text);
+    }
+    .policy-page p  { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
     .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
-    .policy-page a { color: var(--accent); }
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .policy-page a  { color: var(--accent); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
     .back-link:hover { color: var(--text); }
+
+    .highlight-box {
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2rem;
+    }
+    .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+
     hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
   </style>
 
+  <!-- Hero -->
+  <div class="policy-hero">
+    <span class="emoji">🌿</span>
+    <h1>Privacy Policy</h1>
+    <p>Gratefuly — Daily Gratitude Journal</p>
+  </div>
+
+  <!-- Content -->
   <div class="container">
     <div class="policy-page">
-      <a href="/apps/trace-order" class="back-link">← Back to {appName}</a>
-      <h1>Privacy Policy</h1>
+      <a href="/apps/gratefuly" class="back-link">← Back to {appName}</a>
+
       <p class="meta">{appName} · WIPLabs · Last updated: {lastUpdated}</p>
 
-      <hr />
+      <div class="highlight-box">
+        <p>🔒 Gratefuly is built with privacy at its core. Your journal entries, photos, voice recordings, and videos are stored entirely on your device. We do not collect, transmit, or sell your personal data.</p>
+      </div>
 
       <h2>1. Overview</h2>
       <p>
-        This Privacy Policy explains how WIPLabs ("we", "our", or "us") collects, uses, and protects
-        information when you use the {appName} mobile application ("the App").
-        We are committed to protecting your privacy and being transparent about our data practices.
+        This Privacy Policy explains how WIPLabs ("we", "our", or "us") handles information
+        when you use the {appName} mobile application. We are committed to protecting your
+        privacy. Gratefuly does not require an account and stores all your data locally on
+        your device.
       </p>
 
       <h2>2. Information We Collect</h2>
-      <p>We may collect the following types of information:</p>
+      <p>Gratefuly does not collect any personally identifiable information. All data you create is stored locally on your device and never transmitted to our servers. This includes:</p>
       <ul>
-        <li><strong>Information you provide:</strong> Order details, business information, and any data you enter into the app.</li>
-        <li><strong>Device information:</strong> Device type, operating system version, and app version for troubleshooting purposes.</li>
-        <li><strong>Usage data:</strong> How you interact with the app to help us improve the experience.</li>
+        <li>Journal entries (text, mood, date)</li>
+        <li>Photos attached to entries</li>
+        <li>Voice recordings attached to entries</li>
+        <li>Videos attached to entries</li>
+        <li>Streak counts and app settings</li>
+      </ul>
+      <p>We do not have access to any of this data at any time.</p>
+
+      <h2>3. Data Storage</h2>
+      <p>
+        All your journal data is stored exclusively on your device using Apple's SwiftData
+        framework. No data is uploaded to external servers. We do not require you to create
+        an account or log in.
+      </p>
+
+      <h2>4. Analytics & Crash Reporting</h2>
+      <p>
+        Gratefuly does not use any third-party analytics or crash reporting tools.
+        We do not track your usage patterns, session durations, or any behavioral data.
+      </p>
+
+      <h2>5. Advertising</h2>
+      <p>
+        The free version of Gratefuly displays banner advertisements provided by Google AdMob.
+        AdMob may use device identifiers to serve relevant ads. You can opt out of personalized
+        advertising at any time in your device's Privacy settings under "Apple Advertising."
+      </p>
+      <p>Premium subscribers see no advertisements.</p>
+      <p>
+        For more information about Google's privacy practices, visit:
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+      </p>
+
+      <h2>6. In-App Purchases</h2>
+      <p>
+        Gratefuly offers optional premium subscriptions (Monthly, Yearly, Lifetime) processed
+        entirely through Apple's App Store. We do not collect or store any payment information.
+        All billing is handled by Apple.
+      </p>
+
+      <h2>7. Notifications</h2>
+      <p>
+        If you enable daily reminders, Gratefuly uses Apple's local notification system.
+        These notifications are generated entirely on-device — no notification data is sent
+        to our servers.
+      </p>
+
+      <h2>8. App Lock & Biometrics</h2>
+      <p>
+        If you enable the App Lock feature, your PIN is stored securely in Apple's Keychain
+        on your device. Face ID and Touch ID authentication is handled entirely by Apple's
+        LocalAuthentication framework. We never have access to your biometric data.
+      </p>
+
+      <h2>9. Photos, Camera & Microphone</h2>
+      <p>
+        Gratefuly requests access to your photo library only when you choose to add a photo
+        or video to a journal entry. We only access the specific media you select — we do not
+        scan or access your entire photo library.
+      </p>
+      <p>Microphone access is requested only when you choose to record a voice note.</p>
+
+      <h2>10. Children's Privacy</h2>
+      <p>
+        Gratefuly is not directed at children under the age of 13. We do not knowingly collect
+        personal information from children under 13. If you believe a child under 13 has used
+        the app, please contact us and we will take appropriate action.
+      </p>
+
+      <h2>11. Your Rights</h2>
+      <p>Since all data is stored on your device, you have complete control over it. You can delete all app data at any time by deleting Gratefuly from your device.</p>
+      <ul>
+        <li><strong>Access</strong> — all data is on your device, always accessible to you</li>
+        <li><strong>Correction</strong> — edit any entry directly in the app</li>
+        <li><strong>Deletion</strong> — delete individual entries or uninstall the app to remove all data</li>
       </ul>
 
-      <h2>3. How We Use Your Information</h2>
-      <p>We use the information we collect to:</p>
-      <ul>
-        <li>Provide and maintain the App's functionality</li>
-        <li>Improve and optimize the App</li>
-        <li>Respond to support requests</li>
-        <li>Fix bugs and technical issues</li>
-      </ul>
-
-      <h2>4. Data Storage</h2>
+      <h2>12. Changes to This Policy</h2>
       <p>
-        Your data is stored locally on your device. We do not transmit your order or business
-        data to our servers unless explicitly stated within the app.
+        We may update this Privacy Policy from time to time. Changes will be reflected on
+        this page with an updated date. We encourage you to review this policy periodically.
       </p>
 
-      <h2>5. Third-Party Services</h2>
-      <p>
-        The App may use third-party services such as analytics tools. These services have their
-        own privacy policies and may collect data as described in their respective policies.
-      </p>
-
-      <h2>6. Data Retention</h2>
-      <p>
-        We retain your data only as long as necessary to provide the service. You may delete
-        your data at any time from within the App settings.
-      </p>
-
-      <h2>7. Children's Privacy</h2>
-      <p>
-        The App is not intended for children under 13 years of age. We do not knowingly
-        collect personal information from children under 13.
-      </p>
-
-      <h2>8. Your Rights</h2>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Access the personal data we hold about you</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your data</li>
-        <li>Withdraw consent at any time</li>
-      </ul>
-
-      <h2>9. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. We will notify you of any changes
-        by updating the "Last updated" date at the top of this page.
-      </p>
-
-      <h2>10. Contact Us</h2>
+      <h2>13. Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, please contact us at:
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+
+      <hr />
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        © 2026 WIP Labs · <a href="https://wiplabs.app">wiplabs.app</a>
       </p>
     </div>
   </div>
