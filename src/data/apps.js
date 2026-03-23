@@ -44,24 +44,21 @@ export const apps = [
     note: "Built for Bade Pastanesi — a real family business tool.",
   },
   {
-    slug: "gratefuly",
-    name: "Gratefuly",
-    tagline: "",
-    description:
-      "",
-    platform: ["iOS","Android"],
-    status: "wip",
-    storeLinks: {
-      ios: "",
-      android: "",
-    },
-    appStoreId: "",
-    appIcon: "",
-    languages: ["English"],
-    version: "1.0",
-    supportEmail: "hello@wiplabs.app",
+    slug: 'gratefuly',
+    name: 'Gratefuly Journal',
+    tagline: 'A daily gratitude journal for a more mindful life.',
+    description: 'Start each day with gratitude. Gratefuly is a beautiful, private journal that helps you build the habit of noticing the good in your life — in just 2 minutes a day. Every day brings a new writing prompt, mood tracking, streaks, and rich media entries with photos, voice recordings, and videos. Everything stays on your device — no account required, no cloud uploads.',
+    platform: ['iOS'],
+    status: 'wip',
+    version: '1.0',
+    languages: ['English', 'Turkish', 'Spanish'],
+    supportEmail: 'hello@wiplabs.app',
+    appIcon: '/images/apps/gratefuly-icon.png',
     hasDataDeletion: false,
-    icon: "",
-    note: "",
-  },
+    note: null,
+    storeLinks: {
+      ios: 'https://apps.apple.com/app/gratefuly-journal/idYOUR_APP_ID',
+      android: null 
+    }
+  }
 ];

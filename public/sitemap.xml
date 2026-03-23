@@ -45,12 +45,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://wiplabs.app/apps/gratefuly/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-    <url>
+  <url>
     <loc>https://wiplabs.app/apps/gratefuly/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
