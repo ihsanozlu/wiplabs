@@ -50,7 +50,7 @@ export const apps = [
     description: 'Start each day with gratitude. Gratefuly is a beautiful, private journal that helps you build the habit of noticing the good in your life — in just 2 minutes a day. Every day brings a new writing prompt, mood tracking, streaks, and rich media entries with photos, voice recordings, and videos. Everything stays on your device — no account required, no cloud uploads.',
     platform: ['iOS'],
     status: 'live',
-    version: '1.1',
+    version: '1.2',
     languages: ['English', 'Turkish', 'Spanish'],
     supportEmail: 'hello@wiplabs.app',
     appIcon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/b4/1e/b2b41e1c-19d0-9aec-2c70-41e08b03ec5b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg',
