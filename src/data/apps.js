@@ -56,6 +56,7 @@ export const apps = [
     appIcon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/b4/1e/b2b41e1c-19d0-9aec-2c70-41e08b03ec5b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg',
     hasDataDeletion: false,
     note: null,
+    appStoreId: '6760760312',
     storeLinks: {
       ios: 'https://apps.apple.com/us/app/gratefuly-journal/id6760760312',
       android: null 

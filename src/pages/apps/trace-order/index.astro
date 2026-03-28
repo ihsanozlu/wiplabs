@@ -4,7 +4,24 @@ import { apps } from '../../../data/apps.js';
 const app = apps.find(a => a.slug === 'trace-order');
 ---
 
-<BaseLayout title={app.name} description={app.tagline}>
+<BaseLayout 
+  title={app.name} 
+  description={app.tagline}
+  appId={app.appStoreId}
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Trace Order",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://wiplabs.app/apps/trace-order"
+  }}
+>
   <style>
     .app-hero {
       padding: 4rem 0 3rem;

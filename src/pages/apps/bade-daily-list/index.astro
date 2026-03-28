@@ -4,7 +4,24 @@ import { apps } from '../../../data/apps.js';
 const app = apps.find(a => a.slug === 'bade-daily-list');
 ---
 
-<BaseLayout title={app.name} description={app.tagline}>
+<BaseLayout 
+  title={app.name} 
+  description={app.tagline}
+  appId={app.appStoreId}
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Bade Daily List",
+    "operatingSystem": "iOS",
+    "applicationCategory": "ProductivityApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://wiplabs.app/apps/bade-daily-list"
+  }}
+>
   <style>
     .app-hero {
       padding: 4rem 0 3rem;
