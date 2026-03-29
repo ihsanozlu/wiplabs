@@ -46,7 +46,7 @@ export const apps = [
   {
     slug: 'gratefuly',
     name: 'Gratefuly Journal',
-    tagline: 'A daily gratitude journal for a more mindful life.',
+    tagline: 'Private Daily Reflection & Mood Diary',
     description: 'Start each day with gratitude. Gratefuly Journal is a beautiful, private journal that helps you build the habit of noticing the good in your life — in just 2 minutes a day. Every day brings a new writing prompt, mood tracking, streaks, and rich media entries with photos, voice recordings, and videos. Everything stays on your device — no account required, no cloud uploads.',
     platform: ['iOS'],
     status: 'live',
