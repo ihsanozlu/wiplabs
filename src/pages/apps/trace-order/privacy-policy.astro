@@ -7,6 +7,24 @@ const contactEmail = "hello@wiplabs.app";
 
 <BaseLayout title={`Privacy Policy — ${appName}`} description={`Privacy Policy for ${appName} by WIPLabs.`}>
   <style>
+    .policy-hero {
+      background: linear-gradient(135deg, #2C5F8A, #4A90C8);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .policy-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .policy-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin: 0;
+    }
     .policy-page { padding: 4rem 0; max-width: 720px; }
     .policy-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
     .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
@@ -31,10 +49,15 @@ const contactEmail = "hello@wiplabs.app";
     }
   </style>
 
-  <div class="container">
-    <div class="policy-page">
-      <a href="/apps/trace-order" class="back-link">← Back to {appName}</a>
+  <div class="policy-hero">
+      <span class="emoji">📦</span>
       <h1>Privacy Policy</h1>
+      <p>Trace Order — Simple Order Tracking & Accounting</p>
+    </div>
+
+    <div class="container">
+      <div class="policy-page">
+        <a href="/apps/trace-order" class="back-link">← Back to {appName}</a>
       <p class="meta">{appName} · WIPLabs · Last updated: {lastUpdated}</p>
 
       <hr />
