@@ -1,0 +1,382 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps.js';
+const app = apps.find(a => a.slug === 'hukukai');
+---
+
+<BaseLayout
+  title={app.name}
+  description="HukukAI — Türk hukuku sınavlarına yapay zeka destekli hazırlık. 11 kanun, 5000+ soru, senaryo modu, konu analizi."
+  appId={app.appStoreId}
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HukukAI",
+    "operatingSystem": "iOS",
+    "applicationCategory": "EducationApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TRY"
+    },
+    "url": "https://wiplabs.app/apps/hukukai"
+  }}
+>
+  <style>
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #1a1a4e 0%, #2d1b6e 50%, #4a1a6e 100%);
+      padding: 5rem 1.5rem 4rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-left { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245,166,35,0.15);
+      border: 1px solid rgba(245,166,35,0.4);
+      color: #f5a623;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span { color: #f5a623; }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 460px;
+    }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #f5a623;
+      color: #1a1a4e;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-store:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .btn-store-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+    }
+    .btn-store-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); color: #fff; }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-item { text-align: left; }
+    .stat-value { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: #f5a623; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.1rem; }
+
+    /* ── Screenshots ── */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    .phone-frame {
+      width: 180px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+
+    .phone-frame img { width: 100%; display: block; }
+
+    .phone-frame.main {
+      width: 210px;
+      border-color: rgba(245,166,35,0.4);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 40px rgba(245,166,35,0.15);
+      transform: translateY(-16px);
+    }
+
+    .phone-frame.side { opacity: 0.7; }
+
+    /* ── Sections ── */
+    .section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+    .section h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .section p { color: var(--text-muted); line-height: 1.7; }
+
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .feature-card:hover { border-color: var(--text-muted); }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .feature-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Meta grid ── */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+
+    .meta-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Syne', sans-serif; }
+    .meta-value { font-weight: 600; font-size: 0.95rem; }
+
+    /* ── Legal links ── */
+    .legal-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .legal-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'Syne', sans-serif;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .legal-link:hover { background: var(--accent-dim); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">⚖️ iOS App</div>
+        <h1>Hukuku<br /><span>Gerçekten</span><br />Öğren</h1>
+        <p class="hero-sub">
+          Türk hukuku sınavlarına yapay zeka destekli hazırlanın. 11 kanun, 5000+ soru,
+          gerçek dava senaryoları ve madde referanslı açıklamalar.
+        </p>
+        <div class="hero-cta">
+          {app.storeLinks.ios
+            ? <a href={app.storeLinks.ios} class="btn-store" target="_blank">↗ App Store'dan İndir</a>
+            : <span class="btn-store-outline" style="cursor:default">Yakında App Store'da</span>
+          }
+          <a href="#features" class="btn-store-outline">Özellikleri Gör →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">11</div>
+            <div class="stat-label">Kanun</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">5000+</div>
+            <div class="stat-label">Soru</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Şık</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Ücretsiz</div>
+            <div class="stat-label">Başlangıç</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="phone-frame side">
+          <img src="/screenshots/hukukai/exam.png" alt="Sınav modu" />
+        </div>
+        <div class="phone-frame main">
+          <img src="/screenshots/hukukai/question.png" alt="Soru ekranı" />
+        </div>
+        <div class="phone-frame side">
+          <img src="/screenshots/hukukai/results.png" alt="Sonuç analizi" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <h2>Neler sunuyor?</h2>
+      <p>Sadece soru-cevap değil — anlamlı, analizli, akıllı çalışma.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">⚖️</span>
+          <div class="feature-title">11 Kanun, 5000+ Soru</div>
+          <div class="feature-desc">TMK, TBK, TCK, CMK, HMK ve daha fazlası. Her soru madde referansıyla desteklenir.</div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎯</span>
+          <div class="feature-title">Sınav Simülasyonu</div>
+          <div class="feature-desc">Gerçek sınav koşulları — süre, sıra, baskı. Konu bazlı detaylı sonuç analizi.</div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎭</span>
+          <div class="feature-title">Senaryo Soruları</div>
+          <div class="feature-desc">Gerçek dava vakası formatında sorular. Hakimlik kalitesinde uygulama.</div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📊</span>
+          <div class="feature-title">Konu Bazlı Analitik</div>
+          <div class="feature-desc">Güçlü ve zayıf konularını görün. Haftalık grafik, 30 günlük aktivite, doğruluk oranı.</div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔖</span>
+          <div class="feature-title">Kaydedilenler & Tekrar</div>
+          <div class="feature-desc">Zor soruları kaydedin, sonra çalışın. Yanlış soruları otomatik tekrar listesi.</div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🏆</span>
+          <div class="feature-title">Liderlik Tablosu</div>
+          <div class="feature-desc">XP kazanın, Türkiye genelinde sıralamaya girin. Anonim veya kullanıcı adıyla.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App info -->
+    <section class="section">
+      <h2>Uygulama bilgileri</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Platform</div>
+          <div class="meta-value">iOS 17+</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Durum</div>
+          <div class="meta-value">{app.status === 'live' ? 'App Store\'da Mevcut' : 'Yakında'}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Dil</div>
+          <div class="meta-value">Türkçe</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Destek</div>
+          <div class="meta-value">{app.supportEmail}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Geliştirici</div>
+          <div class="meta-value">WIPLabs</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Versiyon</div>
+          <div class="meta-value">{app.version}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="section">
+      <h2>Yasal & Destek</h2>
+      <p>Gizlilik politikamızı okuyun, destek alın veya sorularınızı iletin.</p>
+      <div class="legal-links">
+        <a href="/apps/hukukai/privacy-policy" class="legal-link">Gizlilik Politikası</a>
+        <a href="/apps/hukukai/terms" class="legal-link">Kullanım Koşulları</a>
+        <a href="/support" class="legal-link">Destek</a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

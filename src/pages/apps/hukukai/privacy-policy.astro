@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const appName      = "HukukAI";
+const lastUpdated  = "April 2026";
+const contactEmail = "hello@wiplabs.app";
+---
+
+<BaseLayout
+  title={`Privacy Policy — ${appName}`}
+  description={`HukukAI Gizlilik Politikası. Cihaz kimliği tabanlı anonim yapı — kişisel veri toplanmaz.`}
+>
+  <style>
+    .policy-hero {
+      background: linear-gradient(135deg, #1a1a4e, #4a1a6e);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .policy-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .policy-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero p { color: rgba(255,255,255,0.8); font-size: 1rem; margin: 0; }
+
+    .policy-page { padding: 4rem 0; max-width: 720px; }
+    .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
+    .policy-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--text);
+    }
+    .policy-page p  { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page a  { color: var(--accent); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .highlight-box {
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2rem;
+    }
+    .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+
+  <div class="policy-hero">
+    <span class="emoji">⚖️</span>
+    <h1>Gizlilik Politikası</h1>
+    <p>HukukAI — Türk Hukuku Çalışma Uygulaması</p>
+  </div>
+
+  <div class="container">
+    <div class="policy-page">
+      <a href="/apps/hukukai" class="back-link">← {appName} sayfasına dön</a>
+
+      <p class="meta">{appName} · WIPLabs · Son güncelleme: {lastUpdated}</p>
+
+      <div class="highlight-box">
+        <p>🔒 HukukAI, hesap gerektirmez. Kimliğiniz rastgele üretilen anonim bir cihaz kimliğiyle temsil edilir. Ad, e-posta veya telefon numarası gibi kişisel bilgiler toplanmaz.</p>
+      </div>
+
+      <h2>1. Genel Bakış</h2>
+      <p>
+        Bu Gizlilik Politikası, WIPLabs ("biz", "bizim") olarak HukukAI uygulamasını kullandığınızda
+        bilgilerinizi nasıl işlediğimizi açıklar. Gizliliğinizi korumaya kararlıyız.
+        Uygulama hesap gerektirmez; kimliğiniz tamamen anonimdir.
+      </p>
+
+      <h2>2. Topladığımız Bilgiler</h2>
+      <p>HukukAI aşağıdaki verileri toplar ve işler:</p>
+      <ul>
+        <li><strong>Anonim Cihaz Kimliği (device_id):</strong> Uygulama ilk açıldığında cihazınızda oluşturulan rastgele bir UUID. Sizi tanımlamaz; yalnızca ilerlemenizi kaydetmek için kullanılır.</li>
+        <li><strong>Soru İlerlemesi:</strong> Hangi soruların görüldüğü, doğru/yanlış cevap geçmişi ve konu bazlı doğruluk oranları.</li>
+        <li><strong>Sınav Geçmişi:</strong> Tamamlanan sınavlar, puanlar ve süre bilgisi.</li>
+        <li><strong>Liderlik Tablosu Verisi:</strong> XP puanı ve isteğe bağlı olarak belirlediğiniz kullanıcı adı (gerçek adınız olmak zorunda değildir).</li>
+        <li><strong>APNs Push Token:</strong> Bildirim izni verirseniz, push bildirimleri göndermek amacıyla cihaz token'ınız sunucumuza iletilir.</li>
+      </ul>
+      <p>Ad, e-posta, konum veya telefon numarası gibi kişisel bilgiler toplanmaz.</p>
+
+      <h2>3. Veri Depolama</h2>
+      <p>
+        Soru ilerlemesi, sınav geçmişi ve liderlik tablosu verileri Supabase (PostgreSQL) altyapısı
+        kullanan sunucularımızda saklanır. Tüm kayıtlar anonim cihaz kimliğiyle ilişkilendirilir.
+        Sunucularımız Avrupa Birliği veri merkezi bölgelerinde çalışır.
+      </p>
+
+      <h2>4. Üçüncü Taraf Hizmetleri</h2>
+      <p>HukukAI aşağıdaki üçüncü taraf hizmetlerini kullanır:</p>
+      <ul>
+        <li>
+          <strong>Google AdMob:</strong> Ücretsiz kullanıcılara reklam göstermek için kullanılır.
+          AdMob, reklam kişiselleştirme amacıyla cihaz tanımlayıcılarını işleyebilir.
+          Cihaz ayarlarınızdan "Apple Reklam" bölümünden kişiselleştirilmiş reklamları devre dışı bırakabilirsiniz.
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.
+        </li>
+        <li>
+          <strong>Apple StoreKit 2:</strong> Abonelik satın alma işlemleri Apple altyapısı üzerinden gerçekleşir.
+          Ödeme bilgileriniz bizimle paylaşılmaz.
+        </li>
+        <li>
+          <strong>Sentry:</strong> Uygulama hatalarını tespit etmek için kullanılır. Krash raporları
+          kişisel bilgi içermez.
+        </li>
+      </ul>
+
+      <h2>5. Reklam</h2>
+      <p>
+        Ücretsiz kullanıcılar Google AdMob tarafından sağlanan reklamlar görür. Pro aboneler
+        reklamsız deneyim yaşar. AdMob'un veri kullanımı hakkında daha fazla bilgi almak için
+        Google'ın gizlilik politikasını inceleyebilirsiniz.
+      </p>
+
+      <h2>6. Uygulama İçi Satın Alma</h2>
+      <p>
+        HukukAI, Aylık ve Yıllık abonelik seçenekleri sunar. Tüm satın alma işlemleri
+        Apple App Store üzerinden gerçekleştirilir. Ödeme bilgilerinizi toplamaz veya saklamayız.
+        Abonelikler Apple ID hesap ayarlarından yönetilebilir ve iptal edilebilir.
+      </p>
+
+      <h2>7. Bildirimler</h2>
+      <p>
+        Bildirim izni verirseniz, günlük çalışma hatırlatıcıları ve haftalık analiz
+        bildirimleri gönderebiliriz. APNs push token'ınız yalnızca bildirim göndermek amacıyla
+        kullanılır ve üçüncü taraflarla paylaşılmaz. Bildirimleri istediğiniz zaman cihaz
+        ayarlarından devre dışı bırakabilirsiniz.
+      </p>
+
+      <h2>8. İçerik Sorumluluk Reddi</h2>
+      <p>
+        HukukAI'daki sorular yapay zeka (OpenAI GPT-4) tarafından üretilmiştir ve yalnızca
+        eğitim amaçlıdır. Bu içerikler hukuki tavsiye niteliği taşımaz. Hukuki konularda
+        profesyonel bir avukattan destek almanızı öneririz.
+      </p>
+
+      <h2>9. Çocukların Gizliliği</h2>
+      <p>
+        HukukAI, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altında bir
+        kullanıcının uygulamayı kullandığını düşünüyorsanız lütfen bizimle iletişime geçin.
+      </p>
+
+      <h2>10. Haklarınız</h2>
+      <p>Anonim cihaz kimliğinize bağlı tüm verilerin silinmesini talep edebilirsiniz:</p>
+      <ul>
+        <li><strong>Erişim:</strong> Verileriniz hakkında bilgi almak için bizimle iletişime geçin.</li>
+        <li><strong>Silme:</strong> Tüm verilerinizin silinmesini talep etmek için <a href={`mailto:${contactEmail}`}>{contactEmail}</a> adresine yazın veya uygulamayı silerek verilerinizi kaldırın.</li>
+      </ul>
+
+      <h2>11. Politika Değişiklikleri</h2>
+      <p>
+        Bu politikayı zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayımlanır
+        ve güncelleme tarihi revizyona göre değiştirilir. Uygulamayı kullanmaya devam etmeniz
+        güncel politikayı kabul ettiğiniz anlamına gelir.
+      </p>
+
+      <h2>12. İletişim</h2>
+      <p>
+        Gizlilik politikamız hakkında sorularınız için:
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+
+      <hr />
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        © 2026 WIP Labs · <a href="https://wiplabs.app">wiplabs.app</a>
+        · <a href="/apps/hukukai/terms">Kullanım Koşulları</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

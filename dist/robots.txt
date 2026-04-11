@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wiplabs.app/sitemap.xml

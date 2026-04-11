@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const appName      = "HukukAI";
+const lastUpdated  = "April 2026";
+const contactEmail = "hello@wiplabs.app";
+---
+
+<BaseLayout
+  title={`Terms of Use — ${appName}`}
+  description={`HukukAI Kullanım Koşulları — WIPLabs.`}
+>
+  <style>
+    .policy-hero {
+      background: linear-gradient(135deg, #1a1a4e, #4a1a6e);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .policy-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .policy-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero p { color: rgba(255,255,255,0.8); font-size: 1rem; margin: 0; }
+
+    .policy-page { padding: 4rem 0; max-width: 720px; }
+    .meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 3rem; }
+    .policy-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--text);
+    }
+    .policy-page p  { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { color: var(--text-muted); padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page a  { color: var(--accent); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+
+  <div class="policy-hero">
+    <span class="emoji">📋</span>
+    <h1>Kullanım Koşulları</h1>
+    <p>HukukAI — Türk Hukuku Çalışma Uygulaması</p>
+  </div>
+
+  <div class="container">
+    <div class="policy-page">
+      <a href="/apps/hukukai" class="back-link">← {appName} sayfasına dön</a>
+
+      <p class="meta">{appName} · WIPLabs · Son güncelleme: {lastUpdated}</p>
+
+      <h2>1. Koşulların Kabulü</h2>
+      <p>
+        HukukAI uygulamasını ("Uygulama") indirerek veya kullanarak bu Kullanım Koşulları'nı
+        kabul etmiş sayılırsınız. Bu koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayın.
+        Koşullar, uygulamanın tüm kullanıcıları için geçerlidir.
+      </p>
+
+      <h2>2. Hizmetin Tanımı</h2>
+      <p>
+        HukukAI, Türk hukuku sınavlarına hazırlanan öğrenciler ve hukuk profesyonelleri için
+        yapay zeka destekli bir soru bankası ve çalışma uygulamasıdır. Uygulama; standart sorular,
+        senaryo soruları, sınav simülasyonu, konu bazlı analitik ve liderlik tablosu özellikleri sunar.
+      </p>
+
+      <h2>3. İçerik Sorumluluk Reddi</h2>
+      <p>
+        HukukAI'daki sorular ve açıklamalar yapay zeka (OpenAI GPT-4) tarafından oluşturulmuştur
+        ve yalnızca <strong>eğitim amaçlıdır</strong>. Bu içerikler:
+      </p>
+      <ul>
+        <li>Hukuki tavsiye niteliği taşımaz.</li>
+        <li>Belirli bir davaya veya duruma uygulanamaz.</li>
+        <li>Güncel mevzuatı yansıtmayabilir; kanunlar değişebilir.</li>
+        <li>Bir avukatın tavsiyesinin yerini tutamaz.</li>
+      </ul>
+      <p>
+        Hukuki konularda profesyonel bir avukattan destek almanızı şiddetle tavsiye ederiz.
+      </p>
+
+      <h2>4. Lisans</h2>
+      <p>
+        WIPLabs, uygulamayı kişisel ve ticari olmayan amaçlarla kullanmanız için sınırlı,
+        münhasır olmayan, devredilemez ve geri alınabilir bir lisans verir. Şunları yapamazsınız:
+      </p>
+      <ul>
+        <li>Uygulamayı kopyalamak, değiştirmek veya dağıtmak</li>
+        <li>Tersine mühendislik uygulamak veya kaynak koda erişmeye çalışmak</li>
+        <li>Uygulamayı yasadışı amaçlarla kullanmak</li>
+        <li>Uygulamayı satmak, kiralamak veya alt lisans vermek</li>
+        <li>Uygulamanın otomatik araçlarla içeriğini kazımak (scraping)</li>
+      </ul>
+
+      <h2>5. Premium Abonelik ve Uygulama İçi Satın Alma</h2>
+      <p>
+        HukukAI, Apple App Store üzerinden işlenen isteğe bağlı premium özellikler sunar.
+        Abonelikler için aşağıdaki koşullar geçerlidir:
+      </p>
+      <ul>
+        <li><strong>Aylık ve Yıllık abonelikler</strong>, mevcut dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir.</li>
+        <li>Abonelikler Apple ID hesap ayarlarından yönetilebilir ve iptal edilebilir.</li>
+        <li>Yürürlükteki mevzuatın gerektirdiği durumlar dışında kısmi dönem iadeleri yapılmaz.</li>
+        <li>Fiyatlar önceden bildirim yapılarak değiştirilebilir.</li>
+      </ul>
+
+      <h2>6. Ücretsiz Kullanım Limiti</h2>
+      <p>
+        Ücretsiz kullanıcılar günlük soru limitine tabidir. Bu limit, uygulama yapılandırmasıyla
+        belirlenir ve önceden haber verilmeksizin değiştirilebilir.
+      </p>
+
+      <h2>7. Liderlik Tablosu ve Kullanıcı İçeriği</h2>
+      <p>
+        Liderlik tablosunda görünmek için isteğe bağlı bir kullanıcı adı belirleyebilirsiniz.
+        Kullanıcı adınızın şunları içermemesi gerekir:
+      </p>
+      <ul>
+        <li>Hakaret, küfür veya uygunsuz ifadeler</li>
+        <li>Başkalarının kişisel bilgileri</li>
+        <li>Yanıltıcı veya aldatıcı içerik</li>
+      </ul>
+      <p>
+        Bu kurallara aykırı kullanıcı adları önceden haber verilmeksizin kaldırılabilir.
+      </p>
+
+      <h2>8. Reklam</h2>
+      <p>
+        Ücretsiz sürüm Google AdMob aracılığıyla reklam gösterir.
+        Uygulamanın ücretsiz sürümünü kullanarak reklamların gösterilmesini kabul etmiş sayılırsınız.
+        Premium aboneler reklamsız deneyim yaşar.
+      </p>
+
+      <h2>9. Fikri Mülkiyet</h2>
+      <p>
+        Uygulama, tasarım, arayüz ve yazılım dahil tüm içerikler WIPLabs'a aittir ve
+        telif hakkı yasalarıyla korunmaktadır. Yapay zeka tarafından üretilen soru içerikleri
+        de bu kapsama girer.
+      </p>
+
+      <h2>10. Garanti Reddi</h2>
+      <p>
+        Uygulama, açık veya zımni hiçbir garanti verilmeksizin "olduğu gibi" sunulmaktadır.
+        WIPLabs, uygulamanın kesintisiz, hatasız veya zararlı bileşenlerden arındırılmış
+        olacağını garanti etmez.
+      </p>
+
+      <h2>11. Sorumluluk Sınırlaması</h2>
+      <p>
+        Yürürlükteki mevzuatın izin verdiği azami ölçüde WIPLabs; uygulamanın kullanımından
+        veya kullanılamamasından doğan dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya
+        cezai zararlardan sorumlu tutulamaz.
+      </p>
+
+      <h2>12. Hizmetin Sona Erdirilmesi</h2>
+      <p>
+        Uygulamayı veya özelliklerini herhangi bir zamanda durdurma hakkımızı saklı tutarız.
+        Uygulamayı cihazınızdan silerek kullanımı istediğiniz zaman sonlandırabilirsiniz.
+      </p>
+
+      <h2>13. Geçerli Hukuk</h2>
+      <p>
+        Bu Koşullar, Türkiye Cumhuriyeti hukukuna tabi olup buna göre yorumlanır.
+        Bu Koşullar'dan doğan uyuşmazlıklar, yetkili Türk mahkemelerinde çözüme kavuşturulur.
+      </p>
+
+      <h2>14. Koşullardaki Değişiklikler</h2>
+      <p>
+        Bu Kullanım Koşulları'nı zaman zaman güncelleyebiliriz. Değişikliklerden sonra uygulamayı
+        kullanmaya devam etmeniz yeni koşulları kabul ettiğiniz anlamına gelir.
+        Güncellemeler bu sayfada yayımlanır.
+      </p>
+
+      <h2>15. İletişim</h2>
+      <p>
+        Bu Kullanım Koşulları hakkında sorularınız için:
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+
+      <hr />
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        © 2026 WIP Labs · <a href="https://wiplabs.app">wiplabs.app</a>
+        · <a href="/apps/hukukai/privacy-policy">Gizlilik Politikası</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { apps } from '../data/apps.js';
-const featuredApps = apps.slice(0, 3);
+const featuredApps = apps.slice(0, 4);
 ---
 
 <BaseLayout title="Home" description="iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.">
@@ -264,8 +264,8 @@ const featuredApps = apps.slice(0, 3);
     <div class="building-strip">
       <span>🔧</span>
       <div>
-        <strong>Currently building:</strong> Gratefuly Journal for Android — coming soon.
-        <span style="color: var(--text-muted); margin-left: 0.5rem;">3 apps live.</span>
+        <strong>Currently building:</strong> HukukAI — Turkish law study app, launching on App Store.
+        <span style="color: var(--text-muted); margin-left: 0.5rem;">3 apps live, 1 launching.</span>
       </div>
       <span class="badge">WIP</span>
     </div>
@@ -283,7 +283,9 @@ const featuredApps = apps.slice(0, 3);
               <div class="app-icon">
                 {app.appIcon
                   ? <img src={app.appIcon} alt={app.name} style="width:100%;height:100%;border-radius:10px;object-fit:cover;" />
-                  : <span style="font-size:1.5rem;">{app.slug === 'trace-order' ? '📦' : '📋'}</span>
+                  : <span style="font-size:1.5rem;">
+                      {app.slug === 'trace-order' ? '📦' : app.slug === 'hukukai' ? '⚖️' : '📋'}
+                    </span>
                 }
               </div>
               <span class={`badge ${app.status}`}>{app.status === 'live' ? 'Live' : app.status === 'wip' ? 'WIP' : 'Soon'}</span>
@@ -318,8 +320,8 @@ const featuredApps = apps.slice(0, 3);
             <div class="stat-label">Years DevOps</div>
           </div>
           <div class="stat">
-            <div class="stat-num">3</div>
-            <div class="stat-label">Apps live</div>
+            <div class="stat-num">4</div>
+            <div class="stat-label">Apps</div>
           </div>
         </div>
       </div>
