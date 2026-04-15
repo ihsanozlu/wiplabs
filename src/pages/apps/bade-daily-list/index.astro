@@ -4,10 +4,11 @@ import { apps } from '../../../data/apps.js';
 const app = apps.find(a => a.slug === 'bade-daily-list');
 ---
 
-<BaseLayout 
-  title={app.name} 
+<BaseLayout
+  title={app.name}
   description={app.tagline}
   appId={app.appStoreId}
+  ogImage={app.appIcon.replace('100x100bb.jpg', '512x512bb.jpg')}
   schema={{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

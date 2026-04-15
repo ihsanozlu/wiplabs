@@ -1,7 +1,7 @@
 ---
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
-const { title = "WIPLabs", description = "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.", schema = null, appId = null, keywords = null } = Astro.props;
+const { title = "WIPLabs", description = "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.", schema = null, appId = null, keywords = null, ogImage = "https://wiplabs.app/avatar.jpg" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -27,13 +27,13 @@ const { title = "WIPLabs", description = "iOS and Android apps built by İhsan �
   <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).toString()} />
   <meta property="og:site_name" content="WIPLabs" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://wiplabs.app/avatar.jpg" />
+  <meta property="og:image" content={ogImage} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={`${title} — WIPLabs`} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://wiplabs.app/avatar.jpg" />
+  <meta name="twitter:image" content={ogImage} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
