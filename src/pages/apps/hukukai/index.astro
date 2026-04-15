@@ -6,20 +6,28 @@ const app = apps.find(a => a.slug === 'hukukai');
 
 <BaseLayout
   title={app.name}
-  description="HukukAI — Türk hukuku sınavlarına yapay zeka destekli hazırlık. 11 kanun, 5000+ soru, senaryo modu, konu analizi."
+  description="HukukAI — Türk hukuku sınavlarına yapay zeka destekli hazırlık. HMGS, avukatlık ve hukuk fakültesi sınavları için 11 kanun, 5000+ soru, senaryo modu, konu analizi."
   appId={app.appStoreId}
+  keywords="hukuk soruları, HMGS sınavı, hakimlik sınavı, savcılık sınavı, hukuk çalışma uygulaması, medeni hukuk, ceza hukuku, idare hukuku, hukuk sınav hazırlık, baro sınavı, hukuk testleri,hukuk yapay zeka, HukukAI"
   schema={{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "HukukAI",
-    "operatingSystem": "iOS",
+    "description": "Türk hukuku sınavlarına yapay zeka destekli hazırlık. 11 kanun, 5000+ soru, senaryo modu ve konu bazlı analitik.",
+    "operatingSystem": "iOS, Android",
     "applicationCategory": "EducationApplication",
+    "inLanguage": "tr",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "TRY"
     },
-    "url": "https://wiplabs.app/apps/hukukai"
+    "url": "https://wiplabs.app/apps/hukukai",
+    "author": {
+      "@type": "Organization",
+      "name": "WIPLabs",
+      "url": "https://wiplabs.app"
+    }
   }}
 >
   <style>
@@ -248,7 +256,7 @@ const app = apps.find(a => a.slug === 'hukukai');
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="hero-badge">⚖️ iOS App</div>
+        <div class="hero-badge">⚖️ iOS & Android</div>
         <h1>Hukuku<br /><span>Gerçekten</span><br />Öğren</h1>
         <p class="hero-sub">
           Türk hukuku sınavlarına yapay zeka destekli hazırlanın. 11 kanun, 5000+ soru,
@@ -257,9 +265,12 @@ const app = apps.find(a => a.slug === 'hukukai');
         <div class="hero-cta">
           {app.storeLinks.ios
             ? <a href={app.storeLinks.ios} class="btn-store" target="_blank">↗ App Store'dan İndir</a>
-            : <span class="btn-store-outline" style="cursor:default">Yakında App Store'da</span>
+            : <span class="btn-store-outline" style="cursor:default">🍎 Yakında App Store'da</span>
           }
-          <a href="#features" class="btn-store-outline">Özellikleri Gör →</a>
+          {app.storeLinks.android
+            ? <a href={app.storeLinks.android} class="btn-store" target="_blank">↗ Google Play'den İndir</a>
+            : <span class="btn-store-outline" style="cursor:default">🤖 Yakında Google Play'de</span>
+          }
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -342,11 +353,11 @@ const app = apps.find(a => a.slug === 'hukukai');
       <div class="meta-grid">
         <div class="meta-item">
           <div class="meta-label">Platform</div>
-          <div class="meta-value">iOS 17+</div>
+          <div class="meta-value">iOS 17+ · Android 8+</div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Durum</div>
-          <div class="meta-value">{app.status === 'live' ? 'App Store\'da Mevcut' : 'Yakında'}</div>
+          <div class="meta-value">App Store & Google Play</div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Dil</div>

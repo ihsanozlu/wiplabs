@@ -68,18 +68,18 @@ export const apps = [
     tagline: 'Türk Hukuku Çalışma Uygulaması',
     description:
       'HukukAI, Türk hukuku sınavlarına hazırlanan öğrenciler ve hukuk profesyonelleri için yapay zeka destekli soru bankası uygulamasıdır. 11 kanun, 5000+ soru, hakimlik kalitesinde senaryo soruları, detaylı açıklamalar ve konu bazlı performans analizi.',
-    platform: ['iOS'],
-    status: 'wip',
+    platform: ['iOS', 'Android'],
+    status: 'live',
     version: '1.0',
     languages: ['Turkish'],
     supportEmail: 'hello@wiplabs.app',
     appIcon: null,
     hasDataDeletion: false,
     note: null,
-    appStoreId: null,
+    appStoreId: null,          // add iOS App Store ID when live
     storeLinks: {
-      ios: null,
-      android: null,
+      ios: null,               // add iOS App Store URL when live
+      android: null,           // add Google Play URL when live
     },
   }
 ];

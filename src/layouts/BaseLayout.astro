@@ -1,7 +1,7 @@
 ---
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
-const { title = "WIPLabs", description = "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.", schema = null, appId = null } = Astro.props;
+const { title = "WIPLabs", description = "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.", schema = null, appId = null, keywords = null } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,6 +16,7 @@ const { title = "WIPLabs", description = "iOS and Android apps built by İhsan �
   <meta name="author" content="İhsan Özlü" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+  {keywords && <meta name="keywords" content={keywords} />}
 
   <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="EvVqt5BxHEh-Fjwm5rOvqHL-Cz3wwSrvZjZNhQ6L-Vw" />
@@ -37,7 +38,7 @@ const { title = "WIPLabs", description = "iOS and Android apps built by İhsan �
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  {appId && <meta name="apple-itunes-app" content={`app-id=${appId}, app-argument=https://wiplabs.app/apps/gratefuly`} />}
+  {appId && <meta name="apple-itunes-app" content={`app-id=${appId}, app-argument=${new URL(Astro.url.pathname, Astro.site).toString()}`} />}
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <style is:global>
