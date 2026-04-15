@@ -256,7 +256,7 @@ const app = apps.find(a => a.slug === 'hukukai');
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="hero-badge">⚖️ iOS & Android</div>
+        <div class="hero-badge">⚖️ {app.storeLinks.ios && app.storeLinks.android ? 'iOS & Android' : app.storeLinks.ios ? 'iOS' : 'Android'}</div>
         <h1>Hukuku<br /><span>Gerçekten</span><br />Öğren</h1>
         <p class="hero-sub">
           Türk hukuku sınavlarına yapay zeka destekli hazırlanın. 11 kanun, 5000+ soru,
@@ -357,7 +357,13 @@ const app = apps.find(a => a.slug === 'hukukai');
         </div>
         <div class="meta-item">
           <div class="meta-label">Durum</div>
-          <div class="meta-value">App Store & Google Play</div>
+          <div class="meta-value">
+            {app.storeLinks.ios && app.storeLinks.android
+              ? 'App Store & Google Play'
+              : app.storeLinks.ios
+              ? 'App Store'
+              : 'Google Play'}
+          </div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Dil</div>

@@ -1,4 +1,5 @@
 // All your apps in one place — edit this file to add/update apps
+// for app icon url, use the https://itunes.apple.com/lookup?id=$app_store_id endpoint to get the official app icon from the App Store 100x100 image (use the "artworkUrl100" field in the response)
 
 export const apps = [
   {
@@ -73,12 +74,12 @@ export const apps = [
     version: '1.0',
     languages: ['Turkish'],
     supportEmail: 'hello@wiplabs.app',
-    appIcon: null,
+    appIcon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ed/70/ab/ed70ab76-8601-d320-80f5-1072f544749b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg',
     hasDataDeletion: false,
     note: null,
-    appStoreId: null,          // add iOS App Store ID when live
+    appStoreId: '6761995890',
     storeLinks: {
-      ios: null,               // add iOS App Store URL when live
+      ios: 'https://apps.apple.com/tr/app/hukukai/id6761995890',
       android: null,           // add Google Play URL when live
     },
   }
