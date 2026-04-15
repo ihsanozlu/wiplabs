@@ -89,7 +89,8 @@ const contactEmail = "hello@wiplabs.app";
         <li><strong>Soru İlerlemesi:</strong> Hangi soruların görüldüğü, doğru/yanlış cevap geçmişi ve konu bazlı doğruluk oranları.</li>
         <li><strong>Sınav Geçmişi:</strong> Tamamlanan sınavlar, puanlar ve süre bilgisi.</li>
         <li><strong>Liderlik Tablosu Verisi:</strong> XP puanı ve isteğe bağlı olarak belirlediğiniz kullanıcı adı (gerçek adınız olmak zorunda değildir).</li>
-        <li><strong>APNs Push Token:</strong> Bildirim izni verirseniz, push bildirimleri göndermek amacıyla cihaz token'ınız sunucumuza iletilir.</li>
+        <li><strong>Push Bildirimi Token'ı:</strong> Bildirim izni verirseniz, push bildirimleri göndermek amacıyla cihaz token'ınız (iOS'ta APNs, Android'de FCM) sunucumuza iletilir.</li>
+        <li><strong>Reklam Kimliği (Ad ID):</strong> Google AdMob, reklam kişiselleştirme amacıyla Google Advertising ID'yi işleyebilir (yalnızca Android).</li>
       </ul>
       <p>Ad, e-posta, konum veya telefon numarası gibi kişisel bilgiler toplanmaz.</p>
 
@@ -110,7 +111,7 @@ const contactEmail = "hello@wiplabs.app";
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.
         </li>
         <li>
-          <strong>Apple StoreKit 2:</strong> Abonelik satın alma işlemleri Apple altyapısı üzerinden gerçekleşir.
+          <strong>Apple StoreKit 2 / Google Play Billing:</strong> Abonelik satın alma işlemleri iOS'ta Apple App Store, Android'de Google Play Store altyapısı üzerinden gerçekleşir.
           Ödeme bilgileriniz bizimle paylaşılmaz.
         </li>
         <li>
@@ -129,8 +130,10 @@ const contactEmail = "hello@wiplabs.app";
       <h2>6. Uygulama İçi Satın Alma</h2>
       <p>
         HukukAI, Aylık ve Yıllık abonelik seçenekleri sunar. Tüm satın alma işlemleri
-        Apple App Store üzerinden gerçekleştirilir. Ödeme bilgilerinizi toplamaz veya saklamayız.
-        Abonelikler Apple ID hesap ayarlarından yönetilebilir ve iptal edilebilir.
+        iOS'ta Apple App Store, Android'de Google Play Store üzerinden gerçekleştirilir.
+        Ödeme bilgilerinizi toplamaz veya saklamayız.
+        Abonelikler iOS'ta Apple ID hesap ayarlarından, Android'de Google Play hesap ayarlarından
+        yönetilebilir ve iptal edilebilir.
       </p>
 
       <h2>7. Bildirimler</h2>
