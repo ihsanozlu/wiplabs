@@ -68,7 +68,7 @@ export const apps = [
     name: 'HukukAI',
     tagline: 'Türk Hukuku Çalışma Uygulaması',
     description:
-      'HukukAI, Türk hukuku sınavlarına hazırlanan öğrenciler ve hukuk profesyonelleri için yapay zeka destekli soru bankası uygulamasıdır. 11 kanun, 5000+ soru, hakimlik kalitesinde senaryo soruları, detaylı açıklamalar ve konu bazlı performans analizi.',
+      'Hukuk meslekleri sınavlarına yapay zeka destekli hazırlık. Adli Hakimlik ve HMGS başta olmak üzere diğer hukuk meslek sınavları için 5000\'den fazla soru, mevzuat, senaryo modu ve konu analizi içeriyor.',
     platform: ['iOS', 'Android'],
     status: 'live',
     version: '1.0',

@@ -6,7 +6,7 @@ const app = apps.find(a => a.slug === 'hukukai');
 
 <BaseLayout
   title={app.name}
-  description="HukukAI — Türk hukuku sınavlarına yapay zeka destekli hazırlık. HMGS, avukatlık ve hukuk fakültesi sınavları için 11 kanun, 5000+ soru, senaryo modu, konu analizi."
+  description="HukukAI — Hukuk meslekleri sınavlarına yapay zeka destekli hazırlık. Adli Hakimlik ve HMGS başta olmak üzere diğer hukuk meslek sınavları için 5000’den fazla soru, mevzuat, senaryo modu ve konu analizi içeriyor."
   appId={app.appStoreId}
   ogImage={app.appIcon.replace('100x100bb.jpg', '512x512bb.jpg')}
   keywords="hukuk soruları, HMGS sınavı, hakimlik sınavı, savcılık sınavı, hukuk çalışma uygulaması, medeni hukuk, ceza hukuku, idare hukuku, hukuk sınav hazırlık, baro sınavı, hukuk testleri,hukuk yapay zeka, HukukAI"
@@ -14,7 +14,7 @@ const app = apps.find(a => a.slug === 'hukukai');
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "HukukAI",
-    "description": "Türk hukuku sınavlarına yapay zeka destekli hazırlık. 11 kanun, 5000+ soru, senaryo modu ve konu bazlı analitik.",
+    "description": "Hukuk meslekleri sınavlarına yapay zeka destekli hazırlık. Adli Hakimlik ve HMGS başta olmak üzere diğer hukuk meslek sınavları için 5000'den fazla soru, mevzuat, senaryo modu ve konu analizi içeriyor.",
     "operatingSystem": "iOS, Android",
     "applicationCategory": "EducationApplication",
     "inLanguage": "tr",
@@ -260,8 +260,8 @@ const app = apps.find(a => a.slug === 'hukukai');
         <div class="hero-badge">⚖️ {app.storeLinks.ios && app.storeLinks.android ? 'iOS & Android' : app.storeLinks.ios ? 'iOS' : 'Android'}</div>
         <h1>Hukuku<br /><span>Gerçekten</span><br />Öğren</h1>
         <p class="hero-sub">
-          Türk hukuku sınavlarına yapay zeka destekli hazırlanın. 11 kanun, 5000+ soru,
-          gerçek dava senaryoları ve madde referanslı açıklamalar.
+          Adli Hakimlik ve HMGS başta olmak üzere hukuk meslekleri sınavlarına yapay zeka destekli hazırlanın.
+          5000'den fazla soru, mevzuat, senaryo modu ve konu analizi.
         </p>
         <div class="hero-cta">
           {app.storeLinks.ios
