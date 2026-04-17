@@ -111,10 +111,14 @@ const app = apps.find(a => a.slug === 'bade-daily-list');
           <p>{app.tagline}</p>
           <div class="app-cta">
             {app.storeLinks.ios && (
-              <a href={app.storeLinks.ios} class="btn btn-primary" target="_blank">App Store →</a>
+              <a href={app.storeLinks.ios} target="_blank" style="display:inline-flex;align-items:center;">
+                <img src="/badges/appstore.svg" alt="Download on the App Store" style="height:44px;display:block;" />
+              </a>
             )}
             {app.storeLinks.android && (
-              <a href={app.storeLinks.android} class="btn btn-outline" target="_blank">Google Play →</a>
+              <a href={app.storeLinks.android} target="_blank" style="display:inline-flex;align-items:center;">
+                <img src="/badges/googleplay.png" alt="Get it on Google Play" style="height:64px;display:block;" />
+              </a>
             )}
           </div>
         </div>

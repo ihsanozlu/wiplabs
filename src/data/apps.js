@@ -49,7 +49,7 @@ export const apps = [
     name: 'Gratefuly Journal',
     tagline: 'Private Daily Reflection & Mood Diary',
     description: 'Start each day with gratitude. Gratefuly Journal is a beautiful, private journal that helps you build the habit of noticing the good in your life — in just 2 minutes a day. Every day brings a new writing prompt, mood tracking, streaks, and rich media entries with photos, voice recordings, and videos. Everything stays on your device — no account required, no cloud uploads.',
-    platform: ['iOS'],
+    platform: ['iOS', 'Android'],
     status: 'live',
     version: '1.3',
     languages: ['English', 'Turkish', 'Spanish'],
@@ -60,7 +60,7 @@ export const apps = [
     appStoreId: '6760760312',
     storeLinks: {
       ios: 'https://apps.apple.com/us/app/gratefuly-journal/id6760760312',
-      android: null 
+      android: 'https://play.google.com/store/apps/details?id=com.ihsanozlu.gratefuly' 
     }
   },
   {

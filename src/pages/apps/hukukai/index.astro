@@ -265,11 +265,11 @@ const app = apps.find(a => a.slug === 'hukukai');
         </p>
         <div class="hero-cta">
           {app.storeLinks.ios
-            ? <a href={app.storeLinks.ios} class="btn-store" target="_blank">↗ App Store'dan İndir</a>
+            ? <a href={app.storeLinks.ios} target="_blank" style="display:inline-flex;align-items:center;"><img src="/badges/appstore.svg" alt="Download on the App Store" style="height:44px;display:block;" /></a>
             : <span class="btn-store-outline" style="cursor:default">🍎 Yakında App Store'da</span>
           }
           {app.storeLinks.android
-            ? <a href={app.storeLinks.android} class="btn-store" target="_blank">↗ Google Play'den İndir</a>
+            ? <a href={app.storeLinks.android} target="_blank" style="display:inline-flex;align-items:center;"><img src="/badges/googleplay.png" alt="Get it on Google Play" style="height:64px;display:block;" /></a>
             : <span class="btn-store-outline" style="cursor:default">🤖 Yakında Google Play'de</span>
           }
         </div>
