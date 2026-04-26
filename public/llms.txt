@@ -1,0 +1,53 @@
+# WIPLabs
+
+WIPLabs is an indie mobile app studio run by İhsan Özlü, a Senior DevOps Engineer based in Istanbul, Turkey. The studio ships practical iOS and Android apps built with SwiftUI and Kotlin.
+
+## Developer
+
+- Name: İhsan Özlü
+- Role: Senior DevOps Engineer & indie mobile developer
+- Location: Istanbul, Turkey
+- Contact: hello@wiplabs.app
+- GitHub: https://github.com/ihsanozlu
+- LinkedIn: https://linkedin.com/in/ihsan-özlü-32081a116
+- Background: 8+ years in cloud infrastructure, Kubernetes (AKS, EKS, Rancher), Terraform, Azure, AWS, CI/CD. Mobile apps built with SwiftUI (iOS) and Kotlin (Android) using MVVM architecture.
+
+## Apps
+
+### Trace Order
+- Platforms: iOS, Android
+- Status: Live
+- Page: https://wiplabs.app/apps/trace-order
+- App Store: https://apps.apple.com/tr/app/siparis-takip/id6754329960
+- Google Play: https://play.google.com/store/apps/details?id=com.ihsanozlu.badeorder
+- Description: A mobile app for small businesses to track customer orders, delivery status, and front-end accounting. Built from real family business experience. Supports Turkish, English, and Spanish.
+
+### Bade Daily List
+- Platforms: iOS
+- Status: Live
+- Page: https://wiplabs.app/apps/bade-daily-list
+- App Store: https://apps.apple.com/tr/app/bade-günlük-ürün-listesi/id6742989209
+- Description: A daily product list generator for small retail and bakery businesses. Add products once, then generate and share a fresh list every day in seconds. Built for Bade Pastanesi, a family bakery in Istanbul.
+
+### Gratefuly Journal
+- Platforms: iOS, Android
+- Status: Live
+- Page: https://wiplabs.app/apps/gratefuly
+- App Store: https://apps.apple.com/us/app/gratefuly-journal/id6760760312
+- Google Play: https://play.google.com/store/apps/details?id=com.ihsanozlu.gratefuly
+- Description: A private daily gratitude journal and mood diary. Features daily writing prompts, mood tracking, streaks, and rich media entries (photos, voice recordings, videos). Everything stays on-device — no account required, no cloud uploads. Available in English, Turkish, and Spanish.
+
+### HukukAI
+- Platforms: iOS (Android coming soon)
+- Status: Live
+- Page: https://wiplabs.app/apps/hukukai
+- App Store: https://apps.apple.com/tr/app/hukukai/id6761995890
+- Description: An AI-powered Turkish law exam preparation app. Covers Adli Hakimlik, HMGS, and other Turkish legal profession exams. Includes 5000+ questions across 11 law codes (TMK, TBK, TCK, CMK, HMK, and more), scenario-mode questions, exam simulation, topic-level analytics, and a national leaderboard. In Turkish.
+
+## Site Pages
+
+- Homepage: https://wiplabs.app/
+- All Apps: https://wiplabs.app/apps
+- About: https://wiplabs.app/about
+- Support: https://wiplabs.app/support
+- Sitemap: https://wiplabs.app/sitemap.xml

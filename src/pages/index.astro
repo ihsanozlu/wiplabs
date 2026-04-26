@@ -4,7 +4,45 @@ import { apps } from '../data/apps.js';
 const featuredApps = apps.slice(0, 4);
 ---
 
-<BaseLayout title="Home" description="iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.">
+<BaseLayout
+  title="Home"
+  description="iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "WIPLabs",
+        "url": "https://wiplabs.app",
+        "description": "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.",
+        "author": { "@type": "Person", "name": "İhsan Özlü", "url": "https://wiplabs.app/about" }
+      },
+      {
+        "@type": "Organization",
+        "name": "WIPLabs",
+        "url": "https://wiplabs.app",
+        "logo": "https://wiplabs.app/avatar.jpg",
+        "description": "Indie mobile app studio shipping practical iOS and Android apps.",
+        "founder": {
+          "@type": "Person",
+          "name": "İhsan Özlü",
+          "jobTitle": "Senior DevOps Engineer",
+          "url": "https://wiplabs.app/about",
+          "sameAs": [
+            "https://github.com/ihsanozlu",
+            "https://linkedin.com/in/ihsan-özlü-32081a116"
+          ]
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@wiplabs.app",
+          "contactType": "customer support"
+        },
+        "sameAs": ["https://github.com/ihsanozlu"]
+      }
+    ]
+  }}
+>
   <style>
     /* HERO */
     .hero {

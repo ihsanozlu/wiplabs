@@ -2,7 +2,34 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" description="About İhsan Özlü — Senior DevOps Engineer and indie app developer behind WIPLabs.">
+<BaseLayout
+  title="About"
+  description="İhsan Özlü is a Senior DevOps Engineer from Istanbul with 8+ years in Kubernetes and cloud infrastructure, and the indie developer behind WIPLabs — a studio shipping practical iOS and Android apps."
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "İhsan Özlü",
+    "jobTitle": "Senior DevOps Engineer",
+    "description": "Senior DevOps Engineer with 8+ years of experience in cloud infrastructure and Kubernetes. Indie mobile developer building iOS and Android apps with SwiftUI and Kotlin under the WIPLabs studio.",
+    "url": "https://wiplabs.app/about",
+    "image": "https://wiplabs.app/avatar.jpg",
+    "email": "hello@wiplabs.app",
+    "homeLocation": { "@type": "Place", "name": "Istanbul, Turkey" },
+    "sameAs": [
+      "https://linkedin.com/in/ihsan-özlü-32081a116",
+      "https://github.com/ihsanozlu"
+    ],
+    "knowsAbout": [
+      "Kubernetes", "DevOps", "Cloud Infrastructure", "Azure", "AWS",
+      "Terraform", "SwiftUI", "Kotlin", "iOS Development", "Android Development", "MVVM"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "WIPLabs",
+      "url": "https://wiplabs.app"
+    }
+  }}
+>
   <style>
     .about-page { padding: 4rem 0; }
 
