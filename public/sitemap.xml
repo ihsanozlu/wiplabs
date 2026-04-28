@@ -56,6 +56,21 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://wiplabs.app/apps/opscanary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wiplabs.app/apps/opscanary/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://wiplabs.app/apps/opscanary/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://wiplabs.app/apps/hukukai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

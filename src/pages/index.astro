@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { apps } from '../data/apps.js';
-const featuredApps = apps.slice(0, 4);
+const featuredApps = apps.slice(0, 5);
 ---
 
 <BaseLayout
   title="Home"
-  description="iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use."
+  description="iOS, Android, and web apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical apps for business, DevOps, and everyday use."
   schema={{
     "@context": "https://schema.org",
     "@graph": [
@@ -14,7 +14,7 @@ const featuredApps = apps.slice(0, 4);
         "@type": "WebSite",
         "name": "WIPLabs",
         "url": "https://wiplabs.app",
-        "description": "iOS and Android apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical mobile apps for business and everyday use.",
+        "description": "iOS, Android, and web apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical apps for business, DevOps, and everyday use.",
         "author": { "@type": "Person", "name": "İhsan Özlü", "url": "https://wiplabs.app/about" }
       },
       {
@@ -22,7 +22,7 @@ const featuredApps = apps.slice(0, 4);
         "name": "WIPLabs",
         "url": "https://wiplabs.app",
         "logo": "https://wiplabs.app/avatar.jpg",
-        "description": "Indie mobile app studio shipping practical iOS and Android apps.",
+        "description": "Indie app studio shipping practical iOS, Android, and web apps.",
         "founder": {
           "@type": "Person",
           "name": "İhsan Özlü",
@@ -289,9 +289,8 @@ const featuredApps = apps.slice(0, 4);
       <div class="hero-label">Always building</div>
       <h1>Apps for real-world<br /><span class="accent">problems.</span></h1>
       <p>
-        Senior DevOps Engineer by day, mobile app developer by night. I build practical iOS
-        and Android apps using SwiftUI and Kotlin — from family business tools to globally
-        useful utilities.
+        Senior DevOps Engineer by day, indie developer by night. I build practical iOS, Android,
+        and web apps — from family business tools to globally useful platforms like OpsCanary.
       </p>
       <div class="hero-cta">
         <a href="/apps" class="btn btn-primary">View Apps →</a>
@@ -302,7 +301,7 @@ const featuredApps = apps.slice(0, 4);
     <div class="building-strip">
       <span>🔧</span>
       <div>
-        <strong>Currently building:</strong> HukukAI just launched on the App Store. Always shipping — next one's already in progress.
+        <strong>Latest:</strong> OpsCanary just launched — a daily DevOps learning platform. HukukAI live on App Store. Always shipping.
       </div>
       <span class="badge">WIP</span>
     </div>
@@ -320,9 +319,7 @@ const featuredApps = apps.slice(0, 4);
               <div class="app-icon">
                 {app.appIcon
                   ? <img src={app.appIcon} alt={app.name} style="width:100%;height:100%;border-radius:10px;object-fit:cover;" />
-                  : <span style="font-size:1.5rem;">
-                      {app.slug === 'trace-order' ? '📦' : app.slug === 'hukukai' ? '⚖️' : '📋'}
-                    </span>
+                  : <span style="font-size:1.5rem;">{app.cardIcon || '📦'}</span>
                 }
               </div>
               <span class={`badge ${app.status}`}>{app.status === 'live' ? 'Live' : app.status === 'wip' ? 'WIP' : 'Soon'}</span>
@@ -357,7 +354,7 @@ const featuredApps = apps.slice(0, 4);
             <div class="stat-label">Years DevOps</div>
           </div>
           <div class="stat">
-            <div class="stat-num">4</div>
+            <div class="stat-num">5</div>
             <div class="stat-label">Apps</div>
           </div>
         </div>

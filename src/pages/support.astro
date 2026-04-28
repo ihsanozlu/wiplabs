@@ -86,7 +86,7 @@ import { apps } from '../data/apps.js';
           <div class="app-support-item">
             <span class="app-support-name">{app.name}</span>
             <div class="app-support-links">
-              <a href={`/apps/${app.slug}/privacy-policy`} class="app-support-link">Privacy Policy</a>
+              <a href={app.privacyUrl || `/apps/${app.slug}/privacy-policy`} target={app.privacyUrl ? '_blank' : undefined} rel={app.privacyUrl ? 'noopener' : undefined} class="app-support-link">Privacy Policy</a>
               {app.hasDataDeletion && (
                 <a href={`/apps/${app.slug}/data-deletion`} class="app-support-link">Data Deletion</a>
               )}
@@ -109,11 +109,11 @@ import { apps } from '../data/apps.js';
         </div>
         <div class="faq-item">
           <div class="faq-q">Where are WIPLabs apps available?</div>
-          <div class="faq-a">Available on iOS (App Store) and Android (Google Play). Trace Order is live on both platforms.</div>
+          <div class="faq-a">Mobile apps are available on iOS (App Store) and Android (Google Play). OpsCanary is a web app available at opscanary.com — no install required.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Who is behind WIPLabs?</div>
-          <div class="faq-a">WIPLabs is an indie app studio founded by İhsan Özlü — a Senior DevOps Engineer and mobile app developer based in Istanbul, Turkey. Building practical iOS and Android apps with SwiftUI and Kotlin.</div>
+          <div class="faq-a">WIPLabs is an indie app studio founded by İhsan Özlü — a Senior DevOps Engineer based in Istanbul, Turkey. Building practical iOS, Android, and web apps.</div>
         </div>
       </div>
     </div>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — OpsCanary"
+  description="OpsCanary Privacy Policy. No accounts, no tracking, no data sales. View the full policy on opscanary.com."
+>
+  <style>
+    .redirect-hero {
+      background: linear-gradient(135deg, #061410, #0d2218);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .redirect-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .redirect-hero h1 { font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+    .redirect-hero p { color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0; }
+
+    .redirect-body {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .redirect-body p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .btn-canonical {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #00d97e;
+      color: #061410;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-bottom: 1.5rem;
+    }
+    .btn-canonical:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .back-link {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .note {
+      margin-top: 2.5rem;
+      padding: 1rem 1.25rem;
+      background: color-mix(in srgb, var(--accent) 6%, transparent);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+  </style>
+
+  <div class="redirect-hero">
+    <span class="emoji">🔒</span>
+    <h1>Privacy Policy</h1>
+    <p>OpsCanary — Daily DevOps Learning Platform</p>
+  </div>
+
+  <div class="redirect-body">
+    <p>
+      The canonical OpsCanary Privacy Policy lives on <strong>opscanary.com</strong> — this keeps it
+      accurate and up to date as the product evolves, including future iOS and Android apps.
+    </p>
+
+    <a href="https://opscanary.com/privacy" target="_blank" rel="noopener" class="btn-canonical">
+      Read Privacy Policy on OpsCanary.com →
+    </a>
+
+    <div class="note">
+      <strong>Summary:</strong> No accounts required to browse. Anonymous device ID stored locally for reading history and quiz progress. Email collected only if you subscribe to the daily digest. No data sold, no cross-site tracking. Future mobile apps will be covered by the same policy.
+    </div>
+
+    <a href="/apps/opscanary" class="back-link">← Back to OpsCanary</a>
+  </div>
+</BaseLayout>

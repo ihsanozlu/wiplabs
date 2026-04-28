@@ -82,5 +82,24 @@ export const apps = [
       ios: 'https://apps.apple.com/tr/app/hukukai/id6761995890',
       android: null,           // add Google Play URL when live
     },
+  },
+  {
+    slug: 'opscanary',
+    name: 'OpsCanary',
+    tagline: 'Stay current. 30 minutes a day. Daily DevOps learning.',
+    description: 'Daily DevOps learning with curated articles from official AWS, Azure, GCP, Kubernetes, and Terraform docs — plus scenario-based quizzes and free browser utilities.',
+    platform: ['Web'],
+    status: 'live',
+    version: null,
+    languages: ['English'],
+    supportEmail: 'hello@wiplabs.app',
+    appIcon: '/icons/opscanary.png',
+    hasDataDeletion: false,
+    note: null,
+    appStoreId: null,
+    storeLinks: { ios: null, android: null },
+    webUrl: 'https://opscanary.com',
+    privacyUrl: 'https://opscanary.com/privacy',
+    termsUrl: 'https://opscanary.com/terms',
   }
 ];

@@ -37,6 +37,13 @@ WIPLabs is an indie mobile app studio run by İhsan Özlü, a Senior DevOps Engi
 - Google Play: https://play.google.com/store/apps/details?id=com.ihsanozlu.gratefuly
 - Description: A private daily gratitude journal and mood diary. Features daily writing prompts, mood tracking, streaks, and rich media entries (photos, voice recordings, videos). Everything stays on-device — no account required, no cloud uploads. Available in English, Turkish, and Spanish.
 
+### OpsCanary
+- Platform: Web
+- Status: Live
+- Page: https://wiplabs.app/apps/opscanary
+- URL: https://opscanary.com
+- Description: A daily DevOps learning platform delivering curated technical content from official AWS, Azure, GCP, Kubernetes, and Terraform documentation. 3–5 original AI-authored articles per day capped at 30 minutes, scenario-based quizzes with practical YAML/Terraform/kubectl challenges, and free browser utilities (JWT decoder, CIDR calculator, YAML converter). Covers 10 pillars: Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, Observability, DevSecOps, Platform Engineering, Data Infrastructure. Free, no sign-up required to browse. Optional daily email digest subscription available.
+
 ### HukukAI
 - Platforms: iOS (Android coming soon)
 - Status: Live

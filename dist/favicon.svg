@@ -1,5 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#0d0f14"/>
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" 
-    font-family="sans-serif" font-weight="800" font-size="18" fill="#c8f135">W</text>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b4ff3b"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="9" fill="#0b0f14"/>
+  <path d="M5 8 L11 24 L16 17 L21 24 L27 8"
+        fill="none"
+        stroke="url(#g)"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 </svg>
