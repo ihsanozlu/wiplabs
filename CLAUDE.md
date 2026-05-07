@@ -77,4 +77,4 @@ public/
 | Trace Order | Live | iOS, Android |
 | Bade Daily List | Live | iOS |
 | Gratefuly Journal | Live | iOS |
-| HukukAI | Live | iOS (Android coming) |
+| HukukAI | Live | iOS, Android |

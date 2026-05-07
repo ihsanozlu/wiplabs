@@ -80,7 +80,7 @@ export const apps = [
     appStoreId: '6761995890',
     storeLinks: {
       ios: 'https://apps.apple.com/tr/app/hukukai/id6761995890',
-      android: null,           // add Google Play URL when live
+      android: 'https://play.google.com/store/apps/details?id=com.hukukai',
     },
   },
   {
