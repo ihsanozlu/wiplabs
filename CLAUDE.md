@@ -58,7 +58,7 @@ public/
 | `name` | Display name |
 | `tagline` | Short one-liner |
 | `description` | Longer description for the detail page |
-| `platform` | `['iOS']`, `['Android']`, or `['iOS', 'Android']` |
+| `platform` | `['iOS']`, `['Android']`, `['iOS', 'Android']`, or `['Web']` |
 | `status` | `'live'` / `'wip'` / `'coming-soon'` |
 | `version` | Current version string |
 | `languages` | Array of language names |
@@ -67,6 +67,7 @@ public/
 | `appStoreId` | Numeric App Store ID (used for schema markup) |
 | `storeLinks.ios` | App Store URL (or `null`) |
 | `storeLinks.android` | Google Play URL (or `null`) |
+| `webUrl` | External web app URL (for `['Web']` platform apps) |
 | `hasDataDeletion` | `true` if there is a data-deletion page |
 | `note` | Optional internal note shown on detail page |
 
@@ -76,5 +77,6 @@ public/
 |---|---|---|
 | Trace Order | Live | iOS, Android |
 | Bade Daily List | Live | iOS |
-| Gratefuly Journal | Live | iOS |
+| Gratefuly Journal | Live | iOS, Android |
 | HukukAI | Live | iOS, Android |
+| OpsCanary | Live | Web |
