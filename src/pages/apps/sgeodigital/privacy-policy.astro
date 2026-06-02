@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — SGEO Digital"
+  description="SGEO Digital Privacy Policy. Web design, SEO and GEO agency based in Kayseri, Turkey."
+>
+  <style>
+    .redirect-hero {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .redirect-hero .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .redirect-hero h1 { font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+    .redirect-hero p { color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0; }
+
+    .redirect-body {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .redirect-body p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .btn-canonical {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0ea5e9;
+      color: #0f172a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-bottom: 1.5rem;
+    }
+    .btn-canonical:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .back-link {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .note {
+      margin-top: 2.5rem;
+      padding: 1rem 1.25rem;
+      background: rgba(14,165,233,0.06);
+      border-left: 3px solid #0ea5e9;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+  </style>
+
+  <div class="redirect-hero">
+    <span class="emoji">🔒</span>
+    <h1>Privacy Policy</h1>
+    <p>SGEO Digital — Web Design, SEO & GEO Agency</p>
+  </div>
+
+  <div class="redirect-body">
+    <p>
+      SGEO Digital collects only the information necessary to provide our web design, SEO, and GEO services.
+      Contact form submissions are processed via Formspree. No personal data is sold or shared with third parties.
+    </p>
+
+    <a href="https://sgeodigital.com/en" target="_blank" rel="noopener" class="btn-canonical">
+      Visit SGEO Digital →
+    </a>
+
+    <div class="note">
+      <strong>Summary:</strong> Contact forms collect your name and email to respond to inquiries.
+      Analytics are anonymous (Vercel Analytics — no cookies). No accounts required to browse. No data is sold.
+      For questions, contact hello@wiplabs.app.
+    </div>
+
+    <a href="/apps/sgeodigital" class="back-link">← Back to SGEO Digital</a>
+  </div>
+</BaseLayout>

@@ -44,6 +44,13 @@ WIPLabs is an indie mobile app studio run by İhsan Özlü, a Senior DevOps Engi
 - URL: https://opscanary.com
 - Description: A daily DevOps learning platform delivering curated technical content from official AWS, Azure, GCP, Kubernetes, and Terraform documentation. 3–5 original AI-authored articles per day capped at 30 minutes, scenario-based quizzes with practical YAML/Terraform/kubectl challenges, and free browser utilities (JWT decoder, CIDR calculator, YAML converter). Covers 10 pillars: Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, Observability, DevSecOps, Platform Engineering, Data Infrastructure. Free, no sign-up required to browse. Optional daily email digest subscription available.
 
+### SGEO Digital
+- Platform: Web
+- Status: Live
+- Page: https://wiplabs.app/apps/sgeodigital
+- URL: https://sgeodigital.com
+- Description: A web design, SEO, and GEO (Generative Engine Optimization) agency helping businesses rank on Google and get cited by AI search engines like ChatGPT, Perplexity, and Google AI. Based in Kayseri, Turkey, serving Turkish and international clients. Services include web design, SEO, GEO optimization, and e-commerce. Fully bilingual (Turkish and English).
+
 ### HukukAI
 - Platforms: iOS (Android coming soon)
 - Status: Live

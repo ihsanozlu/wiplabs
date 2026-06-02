@@ -1,0 +1,469 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps.js';
+const app = apps.find(a => a.slug === 'sgeodigital');
+---
+
+<BaseLayout
+  title={app.name}
+  description="SGEO Digital — Web design, SEO, and GEO agency. Rank on Google and get cited by ChatGPT, Perplexity, and Google AI. Fast, mobile-first websites built to convert."
+  keywords="SGEO Digital, web design agency, SEO agency, GEO optimization, generative engine optimization, Kayseri web tasarım, ChatGPT visibility, AI search SEO, sgeodigital.com"
+  ogImage="https://sgeodigital.com/og-default.png"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SGEO Digital",
+    "description": "Web design, SEO, and GEO (Generative Engine Optimization) agency helping businesses rank on Google and get cited by AI search engines like ChatGPT and Perplexity.",
+    "url": "https://sgeodigital.com",
+    "applicationCategory": "BusinessApplication",
+    "inLanguage": ["tr", "en"],
+    "author": {
+      "@type": "Organization",
+      "name": "WIPLabs",
+      "url": "https://wiplabs.app"
+    },
+    "sameAs": ["https://sgeodigital.com"]
+  }}
+>
+  <style>
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #0c1a2e 100%);
+      padding: 5rem 1.5rem 4rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 460px; height: 460px;
+      background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(14,165,233,0.12);
+      border: 1px solid rgba(14,165,233,0.35);
+      color: #0ea5e9;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 .sky { color: #0ea5e9; }
+    .hero h1 .purple { color: #8b5cf6; }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+    .btn-visit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0ea5e9;
+      color: #0f172a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-visit:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .btn-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+    }
+    .btn-sub:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.4); color: #fff; }
+
+    .hero-pills {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+    .pill-sky { color: #0ea5e9; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); }
+    .pill-purple { color: #8b5cf6; background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25); }
+
+    /* ── Browser mockup ── */
+    .browser-card {
+      background: rgba(15,23,42,0.75);
+      border: 1px solid rgba(14,165,233,0.2);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .browser-bar {
+      background: rgba(14,165,233,0.06);
+      border-bottom: 1px solid rgba(14,165,233,0.15);
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot.red   { background: #ff5f57; }
+    .dot.yellow{ background: #febc2e; }
+    .dot.green { background: #28c840; }
+
+    .browser-url {
+      margin-left: 0.5rem;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Syne', sans-serif;
+    }
+
+    .browser-body { padding: 1.25rem; }
+
+    .serp-item {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .serp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .serp-source {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.15rem;
+      font-family: 'Syne', sans-serif;
+    }
+
+    .serp-title {
+      font-size: 0.82rem;
+      color: #0ea5e9;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.2rem;
+    }
+
+    .serp-desc {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    .serp-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      margin-top: 0.25rem;
+    }
+    .serp-badge.geo { color: #8b5cf6; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.3); }
+    .serp-badge.seo { color: #0ea5e9; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); }
+
+    /* ── Sections ── */
+    .section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+    .section > h2 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+    .section > p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+
+    /* ── Services grid ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .service-card:hover { border-color: rgba(14,165,233,0.3); }
+
+    .service-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+    .service-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .service-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Sectors ── */
+    .sectors-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .sector-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(14,165,233,0.07);
+      border: 1px solid rgba(14,165,233,0.22);
+      color: #0ea5e9;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+    }
+
+    /* ── Meta grid ── */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+
+    .meta-label { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Syne', sans-serif; }
+    .meta-value { font-weight: 600; font-size: 0.95rem; }
+
+    /* ── Legal links ── */
+    .legal-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .legal-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0ea5e9;
+      font-family: 'Syne', sans-serif;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid #0ea5e9;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .legal-link:hover { background: rgba(14,165,233,0.1); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero h1 { font-size: 2.4rem; }
+    }
+  </style>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <img src="/icons/sgeodigital.svg" alt="SGEO Digital" style="width:16px;height:16px;border-radius:3px;vertical-align:middle;" />
+          Web App
+        </div>
+        <h1>Rank on <span class="sky">Google.</span><br />Get cited by <span class="purple">AI.</span></h1>
+        <p class="hero-sub">
+          Web design, SEO, and GEO (Generative Engine Optimization) agency.
+          We help businesses appear on Google — and get cited by ChatGPT, Perplexity, and Google AI.
+        </p>
+        <div class="hero-cta">
+          <a href="https://sgeodigital.com/en" target="_blank" rel="noopener" class="btn-visit">
+            Visit SGEO Digital →
+          </a>
+          <a href="https://sgeodigital.com/en#contact" target="_blank" rel="noopener" class="btn-sub">
+            Get a Quote →
+          </a>
+        </div>
+        <div class="hero-pills">
+          <span class="pill pill-sky">Web Design</span>
+          <span class="pill pill-sky">SEO</span>
+          <span class="pill pill-purple">GEO</span>
+          <span class="pill pill-purple">AI Visibility</span>
+          <span class="pill pill-sky">E-Commerce</span>
+        </div>
+      </div>
+
+      <!-- Browser mockup -->
+      <div class="hero-right">
+        <div class="browser-card">
+          <div class="browser-bar">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <span class="browser-url">ChatGPT · Google AI · Perplexity</span>
+          </div>
+          <div class="browser-body">
+            <div class="serp-item">
+              <div class="serp-source">Google AI Overview</div>
+              <div class="serp-title">Best web design agency in Kayseri</div>
+              <div class="serp-desc">SGEO Digital offers fast, mobile-first websites built to rank on Google and appear in AI search results…</div>
+              <span class="serp-badge geo">GEO</span>
+            </div>
+            <div class="serp-item">
+              <div class="serp-source">google.com · #1 organic</div>
+              <div class="serp-title">Web Design & SEO — SGEO Digital</div>
+              <div class="serp-desc">Professional websites that convert. SEO-optimized from day one. Starting at ₺15,000.</div>
+              <span class="serp-badge seo">SEO</span>
+            </div>
+            <div class="serp-item">
+              <div class="serp-source">ChatGPT · citation</div>
+              <div class="serp-title">"According to sgeodigital.com…"</div>
+              <div class="serp-desc">AI search engines now cite your website directly in their answers.</div>
+              <span class="serp-badge geo">GEO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <p>Everything a modern business needs to win online — in search and in AI.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🌐</span>
+          <div class="service-title">Web Design</div>
+          <div class="service-desc">Fast, mobile-first, conversion-focused websites. Built to rank from day one with clean code and structured data.</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📈</span>
+          <div class="service-title">SEO</div>
+          <div class="service-desc">Rank higher on Google with on-page SEO, technical audits, and content strategy built around real search intent.</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🤖</span>
+          <div class="service-title">GEO Optimization</div>
+          <div class="service-desc">Get cited by ChatGPT, Perplexity, and Google AI. Generative Engine Optimization — the next layer of search.</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🛒</span>
+          <div class="service-title">E-Commerce</div>
+          <div class="service-desc">SEO-optimized online stores that drive organic traffic and convert visitors into buyers.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
+    <section class="section">
+      <h2>Industries served</h2>
+      <p>Sector-specific expertise for businesses that need to stand out locally and nationally.</p>
+      <div class="sectors-wrap">
+        <span class="sector-tag">🌿 Landscaping</span>
+        <span class="sector-tag">🛋 Furniture</span>
+        <span class="sector-tag">🏥 Clinics & Health</span>
+        <span class="sector-tag">⚖️ Law</span>
+        <span class="sector-tag">🍽 Restaurants</span>
+        <span class="sector-tag">🏗 Construction & Architecture</span>
+        <span class="sector-tag">🚀 SaaS & Startups</span>
+      </div>
+    </section>
+
+    <!-- App info -->
+    <section class="section">
+      <h2>About</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Platform</div>
+          <div class="meta-value">Web</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Languages</div>
+          <div class="meta-value">Turkish · English</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Based in</div>
+          <div class="meta-value">Kayseri, Turkey</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Clients</div>
+          <div class="meta-value">TR & International</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Support</div>
+          <div class="meta-value">{app.supportEmail}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Developer</div>
+          <div class="meta-value">WIPLabs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="section">
+      <h2>Legal & Support</h2>
+      <p>Get in touch or read the legal documents for SGEO Digital.</p>
+      <div class="legal-links">
+        <a href="/apps/sgeodigital/privacy-policy" class="legal-link">Privacy Policy</a>
+        <a href="/apps/sgeodigital/terms" class="legal-link">Terms of Use</a>
+        <a href="/support" class="legal-link">Support</a>
+        <a href="https://sgeodigital.com/en" target="_blank" rel="noopener" class="legal-link">Visit SGEO Digital →</a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

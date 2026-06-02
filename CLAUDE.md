@@ -80,3 +80,4 @@ public/
 | Gratefuly Journal | Live | iOS, Android |
 | HukukAI | Live | iOS, Android |
 | OpsCanary | Live | Web |
+| SGEO Digital | Live | Web |

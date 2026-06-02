@@ -101,5 +101,22 @@ export const apps = [
     webUrl: 'https://opscanary.com',
     privacyUrl: 'https://opscanary.com/privacy',
     termsUrl: 'https://opscanary.com/terms',
-  }
+  },
+  {
+    slug: 'sgeodigital',
+    name: 'SGEO Digital',
+    tagline: 'Rank on Google. Get cited by AI.',
+    description: 'A web design, SEO, and GEO (Generative Engine Optimization) agency helping businesses rank on Google and get cited by AI search engines like ChatGPT and Perplexity. Based in Kayseri, Turkey — serving clients globally.',
+    platform: ['Web'],
+    status: 'live',
+    version: null,
+    languages: ['Turkish', 'English'],
+    supportEmail: 'hello@wiplabs.app',
+    appIcon: '/icons/sgeodigital.svg',
+    hasDataDeletion: false,
+    note: null,
+    appStoreId: null,
+    storeLinks: { ios: null, android: null },
+    webUrl: 'https://sgeodigital.com',
+  },
 ];
