@@ -6,7 +6,9 @@ import { apps } from '../data/apps.js';
 <BaseLayout title="Support" description="Get support for WIPLabs apps.">
   <style>
     .support-page { padding: 4rem 0; }
-    .support-page h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .support-page h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .support-card-icon { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .support-card h2 { font-size: 1.1rem; margin-bottom: 0; }
     .support-page > .subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 480px; }
 
     .support-grid {
@@ -68,12 +70,22 @@ import { apps } from '../data/apps.js';
 
       <div class="support-grid">
         <div class="support-card">
-          <h2>📧 Email Support</h2>
+          <div class="support-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+            </svg>
+            <h2>Email Support</h2>
+          </div>
           <p>Send us an email and we'll get back to you as soon as possible. Usually within 24–48 hours.</p>
           <a href="mailto:hello@wiplabs.app" class="btn btn-primary">hello@wiplabs.app</a>
         </div>
         <div class="support-card">
-          <h2>🔒 Privacy Policies</h2>
+          <div class="support-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <h2>Privacy Policies</h2>
+          </div>
           <p>Looking for privacy policy or data deletion info for a specific app? Find it below.</p>
           <a href="#app-policies" class="btn btn-outline">Jump to app policies ↓</a>
         </div>

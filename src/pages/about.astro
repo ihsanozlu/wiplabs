@@ -45,8 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .about-hero h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
 
@@ -167,6 +167,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       border: 1px solid var(--border);
     }
 
+    .hire-strip {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .hire-strip h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .hire-strip p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
     @media (max-width: 640px) {
       .about-hero { grid-template-columns: 1fr; }
       .profile-card { display: none; }
@@ -216,14 +241,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="content-section">
         <h2>The side projects</h2>
         <p>
-          WIPLabs is where I build mobile apps. It started with a practical need — helping a family
-          business track orders and operations — and grew into a bigger interest in building apps
-          that solve real everyday problems.
+          WIPLabs is where I build products and offer consulting services. It started with a practical need —
+          helping a family business track orders — and grew into shipping real apps on the App Store and
+          Google Play, and eventually into DevOps consulting for startups.
         </p>
         <p>
-          I'm a junior mobile developer in this space and I'm okay with that. The engineering discipline
-          from DevOps carries over — I care about reliability, clean structure, and shipping things that
-          actually work.
+          I also built <a href="https://opscanary.com" target="_blank" rel="noopener" style="color:var(--accent);">OpsCanary</a> —
+          a daily DevOps learning platform that turns official AWS, Azure, Kubernetes, and Terraform docs
+          into readable 30-minute briefs.
         </p>
       </div>
 
@@ -292,6 +317,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
       </div>
+      <div class="hire-strip">
+        <div>
+          <h3>Need DevOps or mobile dev help?</h3>
+          <p>Fixed-price packages — Kubernetes audits, CI/CD pipelines, Terraform, iOS & Android apps.</p>
+        </div>
+        <a href="/services" class="btn btn-primary" style="white-space:nowrap;">View Services →</a>
+      </div>
+
     </div>
   </div>
 </BaseLayout>

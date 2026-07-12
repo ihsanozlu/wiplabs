@@ -1,7 +1,7 @@
 ---
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
-const { title = "WIPLabs", description = "iOS, Android, and web apps built by İhsan Özlü — a Senior DevOps Engineer from Istanbul. Practical apps for business, DevOps, and everyday use.", schema = null, appId = null, keywords = null, ogImage = "https://wiplabs.app/avatar.jpg" } = Astro.props;
+const { title = "WIPLabs", description = "Platform Engineering & Mobile Development for startups — Kubernetes, Terraform, CI/CD, iOS & Android. Fixed-price services by İhsan Özlü, Senior DevOps Engineer.", schema = null, appId = null, keywords = null, ogImage = "https://wiplabs.app/og.png" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -264,6 +264,7 @@ const { title = "WIPLabs", description = "iOS, Android, and web apps built by İ
     <div class="nav-inner">
       <a href="/" class="nav-logo">WIP<span>Labs</span></a>
       <ul class="nav-links">
+        <li><a href="/services">Services</a></li>
         <li><a href="/apps">Apps</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/support">Support</a></li>
@@ -280,17 +281,12 @@ const { title = "WIPLabs", description = "iOS, Android, and web apps built by İ
     <div class="footer-inner">
       <div class="footer-brand">WIP<span>Labs</span></div>
       <ul class="footer-links">
+        <li><a href="/services">Services</a></li>
         <li><a href="/apps">Apps</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/support">Support</a></li>
-        <li><a href="/apps/trace-order/privacy-policy">Privacy (Trace Order)</a></li>
-        <li><a href="/apps/bade-daily-list/privacy-policy">Privacy (Bade)</a></li>
-        <li><a href="/apps/gratefuly/privacy-policy">Privacy (Gratefuly)</a></li>
-        <li><a href="/apps/gratefuly/terms">Terms (Gratefuly)</a></li>
-        <li><a href="/apps/hukukai/privacy-policy">Privacy (HukukAI)</a></li>
-        <li><a href="/apps/hukukai/terms">Terms (HukukAI)</a></li>
-        <li><a href="https://opscanary.com/privacy" target="_blank" rel="noopener">Privacy (OpsCanary)</a></li>
-        <li><a href="https://opscanary.com/terms" target="_blank" rel="noopener">Terms (OpsCanary)</a></li>
+        <li><a href="https://opscanary.com" target="_blank" rel="noopener">OpsCanary</a></li>
+        <li><a href="/support#app-policies">Privacy & Terms</a></li>
       </ul>
       <p class="footer-copy">© {new Date().getFullYear()} WIPLabs · Built by İhsan Özlü · Istanbul, Turkey</p>
     </div>

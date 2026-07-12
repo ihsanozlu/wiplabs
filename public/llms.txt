@@ -1,16 +1,63 @@
 # WIPLabs
 
-WIPLabs is an indie mobile app studio run by İhsan Özlü, a Senior DevOps Engineer based in Istanbul, Turkey. The studio ships practical iOS and Android apps built with SwiftUI and Kotlin.
+WIPLabs is a platform engineering and mobile development studio run by İhsan Özlü, a Senior DevOps Engineer based in Istanbul, Turkey. WIPLabs offers fixed-price DevOps consulting services (Kubernetes, Terraform, CI/CD, cloud infrastructure) and builds native iOS and Android apps.
 
 ## Developer
 
 - Name: İhsan Özlü
-- Role: Senior DevOps Engineer & indie mobile developer
+- Role: Senior DevOps Engineer, Platform Engineering Consultant & Mobile Developer
 - Location: Istanbul, Turkey
 - Contact: hello@wiplabs.app
 - GitHub: https://github.com/ihsanozlu
 - LinkedIn: https://linkedin.com/in/ihsan-özlü-32081a116
-- Background: 8+ years in cloud infrastructure, Kubernetes (AKS, EKS, Rancher), Terraform, Azure, AWS, CI/CD. Mobile apps built with SwiftUI (iOS) and Kotlin (Android) using MVVM architecture.
+- Background: 8+ years in cloud infrastructure, Kubernetes (AKS, EKS, Rancher), Terraform, Azure, AWS, CI/CD pipelines (Azure DevOps, Jenkins, GitHub Actions), observability (Grafana, Prometheus, Loki). Also builds native iOS (SwiftUI) and Android (Kotlin) apps using MVVM architecture.
+
+## Services
+
+WIPLabs offers fixed-price DevOps and platform engineering services for startups and growing companies. All services have a defined scope, fixed price, and are delivered within days.
+
+### Architecture Call
+- Price: $99
+- What: 1-hour Zoom consultation, written summary and recommendations
+- Delivered: same day
+- Contact: hello@wiplabs.app
+
+### Kubernetes Health Audit
+- Price: $399
+- What: Full cluster security review, performance and resource analysis, cost optimization report, PDF report, 1-hour walkthrough call
+- Delivered: 3 business days
+- Contact: hello@wiplabs.app
+
+### CI/CD Pipeline Setup
+- Price: $699
+- What: GitHub Actions or Azure DevOps pipeline with Docker build, automated deployment, rollback strategy, documentation
+- Delivered: 5 business days
+- Contact: hello@wiplabs.app
+
+### Terraform Infrastructure
+- Price: $999
+- What: VPC/networking, Kubernetes cluster (AKS or EKS), monitoring stack, all code in a private GitHub repo, full documentation
+- Delivered: 7 business days
+- Contact: hello@wiplabs.app
+
+### Monitoring Stack
+- Price: $1,299
+- What: Grafana + Prometheus + Loki + Alertmanager, custom dashboards, alert rules, runbook documentation, handoff call
+- Delivered: 5 business days
+- Contact: hello@wiplabs.app
+
+### Monthly Retainer
+- Starter: $800/month — 4hrs/month, infrastructure review, Slack support
+- Growth: $1,500/month — 8hrs/month, Terraform + Kubernetes + CI/CD + monitoring support
+- Contact: hello@wiplabs.app
+
+### Mobile App Development
+- iOS MVP (SwiftUI, App Store submission): from $2,500
+- iOS + Android MVP (native, both stores): from $4,500
+- Contact: hello@wiplabs.app
+
+### Full Services Page
+- URL: https://wiplabs.app/services
 
 ## Apps
 
@@ -61,6 +108,7 @@ WIPLabs is an indie mobile app studio run by İhsan Özlü, a Senior DevOps Engi
 ## Site Pages
 
 - Homepage: https://wiplabs.app/
+- Services: https://wiplabs.app/services
 - All Apps: https://wiplabs.app/apps
 - About: https://wiplabs.app/about
 - Support: https://wiplabs.app/support

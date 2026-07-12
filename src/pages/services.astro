@@ -1,0 +1,514 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const packages = [
+  {
+    name: "Architecture Call",
+    price: "$99",
+    tagline: "Not sure where to start? Let's talk.",
+    deliverables: [
+      "1-hour Zoom consultation",
+      "Written summary & recommendations after",
+      "Technology stack advice",
+      "Honest assessment, no upsell pressure",
+    ],
+    timeline: "Same day",
+    highlight: false,
+    subject: "Architecture Call",
+  },
+  {
+    name: "Kubernetes Health Audit",
+    price: "$399",
+    tagline: "Find problems before they find you.",
+    deliverables: [
+      "Full cluster security review",
+      "Performance & resource analysis",
+      "Cost optimization recommendations",
+      "Written PDF report",
+      "1-hour walkthrough call",
+    ],
+    timeline: "3 business days",
+    highlight: false,
+    subject: "Kubernetes Health Audit",
+  },
+  {
+    name: "CI/CD Pipeline Setup",
+    price: "$699",
+    tagline: "Ship faster, with confidence.",
+    deliverables: [
+      "GitHub Actions or Azure DevOps pipeline",
+      "Docker build, test & push stages",
+      "Automated deployment to staging & prod",
+      "Rollback strategy included",
+      "Documentation & handoff call",
+    ],
+    timeline: "5 business days",
+    highlight: true,
+    subject: "CI/CD Pipeline Setup",
+  },
+  {
+    name: "Terraform Infrastructure",
+    price: "$999",
+    tagline: "Your cloud, built right from the start.",
+    deliverables: [
+      "VPC / networking setup",
+      "Kubernetes cluster (AKS or EKS)",
+      "Monitoring stack included",
+      "All code in a private GitHub repo",
+      "Full documentation",
+    ],
+    timeline: "7 business days",
+    highlight: false,
+    subject: "Terraform Infrastructure",
+  },
+  {
+    name: "Monitoring Stack",
+    price: "$1,299",
+    tagline: "Find production issues before your customers do.",
+    deliverables: [
+      "Grafana + Prometheus + Loki + Alertmanager",
+      "Custom dashboards for your stack",
+      "Alert rules with sensible defaults",
+      "Runbook documentation",
+      "Handoff walkthrough call",
+    ],
+    timeline: "5 business days",
+    highlight: false,
+    subject: "Monitoring Stack Setup",
+  },
+];
+
+const steps = [
+  { num: "01", title: "Book a free call", desc: "30 minutes on Zoom. We talk about your stack, your pain points, and which package fits." },
+  { num: "02", title: "Get a written scope", desc: "I send a one-page document: what I'll deliver, what's out of scope, timeline, and price. No surprises." },
+  { num: "03", title: "Pay & I start", desc: "50% upfront via Stripe. Work starts immediately. You'll get regular updates throughout." },
+  { num: "04", title: "Delivery + handoff", desc: "Code in GitHub, docs in Notion, and a walkthrough call. Includes 7 days of bug fixes after delivery." },
+];
+---
+
+<BaseLayout
+  title="Services"
+  description="Fixed-price DevOps & Platform Engineering services. Kubernetes audits, CI/CD pipelines, Terraform infrastructure, and monitoring stacks — delivered in days, not months."
+  keywords="DevOps consulting, Kubernetes audit, CI/CD setup, Terraform infrastructure, Azure DevOps, platform engineering, freelance DevOps engineer Istanbul"
+>
+  <style>
+    /* HERO */
+    .hero {
+      padding: 5rem 0 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* PACKAGES */
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pkg-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .pkg-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .pkg-card.featured {
+      border-color: var(--accent);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -1px;
+      right: 1.5rem;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .pkg-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .pkg-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .pkg-price {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .pkg-deliverables {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .pkg-deliverables li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .pkg-deliverables li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .pkg-timeline {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .pkg-timeline span {
+      color: var(--text);
+    }
+
+    /* HOW IT WORKS */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+    }
+
+    .step-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-dim);
+      line-height: 1;
+      margin-bottom: 1rem;
+      -webkit-text-stroke: 1px var(--accent);
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* CUSTOM / RETAINER */
+    .custom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .custom-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+    }
+
+    .custom-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .custom-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .retainer-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .retainer-tier {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-hover);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .retainer-tier strong {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+    }
+
+    .retainer-price {
+      color: var(--accent);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 14px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin: 4rem 0;
+    }
+
+    .cta-strip h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-strip p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+      .custom-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-label">Platform Engineering & Mobile Development</div>
+      <h1>Fixed-price DevOps services.<br /><span class="accent">No surprises.</span></h1>
+      <p>
+        8+ years of cloud infrastructure experience packaged into clear, scoped deliverables.
+        You know exactly what you're getting, what it costs, and when it arrives.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://cal.com/ihsanozlu/free-30-min-consultation" class="btn btn-primary">Book a free 30-min call →</a>
+        <a href="/about" class="btn btn-outline">About me</a>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="section">
+      <h2 class="section-title">Packages</h2>
+      <p class="section-sub">Fixed scope. Fixed price. Delivered in days — not months.</p>
+      <div class="packages-grid">
+        {packages.map((pkg) => (
+          <div class={`pkg-card ${pkg.highlight ? 'featured' : ''}`}>
+            {pkg.highlight && <div class="featured-badge">Most popular</div>}
+            <div>
+              <div class="pkg-name">{pkg.name}</div>
+              <div class="pkg-tagline">{pkg.tagline}</div>
+            </div>
+            <div class="pkg-price">{pkg.price}</div>
+            <ul class="pkg-deliverables">
+              {pkg.deliverables.map(d => <li>{d}</li>)}
+            </ul>
+            <div class="pkg-timeline">Delivered in <span>{pkg.timeline}</span></div>
+            <a
+              href="https://cal.com/ihsanozlu/free-30-min-consultation"
+              class="btn btn-primary"
+              style="text-align:center;justify-content:center;"
+            >
+              Get started →
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">Simple process. No long contracts.</p>
+      <div class="steps-grid">
+        {steps.map((step) => (
+          <div class="step">
+            <div class="step-num">{step.num}</div>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- RETAINER + MOBILE -->
+    <section class="section">
+      <h2 class="section-title">Need more?</h2>
+      <p class="section-sub">Ongoing support or a full product build — both are available.</p>
+      <div class="custom-grid">
+
+        <div class="custom-card">
+          <h3>Monthly Retainer</h3>
+          <p>
+            Ongoing infrastructure support, reviews, and changes — without hiring a full-time DevOps engineer.
+            Great for startups that need expertise a few hours a week.
+          </p>
+          <div class="retainer-tiers">
+            <div class="retainer-tier">
+              <div>
+                <strong>Starter</strong>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">4hrs/mo · infra review · Slack support</div>
+              </div>
+              <div class="retainer-price">$800/mo</div>
+            </div>
+            <div class="retainer-tier">
+              <div>
+                <strong>Growth</strong>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">8hrs/mo · Terraform + K8s + CI/CD + monitoring</div>
+              </div>
+              <div class="retainer-price">$1,500/mo</div>
+            </div>
+          </div>
+          <a href="https://cal.com/ihsanozlu/free-30-min-consultation" class="btn btn-outline">Inquire →</a>
+        </div>
+
+        <div class="custom-card">
+          <h3>Mobile App Development</h3>
+          <p>
+            Native iOS (SwiftUI) and Android (Kotlin) apps — built by someone who has actually shipped
+            apps to the App Store and Google Play. From MVP to full product.
+          </p>
+          <div class="retainer-tiers">
+            <div class="retainer-tier">
+              <div>
+                <strong>iOS MVP</strong>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">SwiftUI · App Store submission · 3-4 weeks</div>
+              </div>
+              <div class="retainer-price">from $2,500</div>
+            </div>
+            <div class="retainer-tier">
+              <div>
+                <strong>iOS + Android MVP</strong>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">Native · both stores · 5-7 weeks</div>
+              </div>
+              <div class="retainer-price">from $4,500</div>
+            </div>
+          </div>
+          <a href="https://cal.com/ihsanozlu/free-30-min-consultation" class="btn btn-outline">Inquire →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="cta-strip">
+      <h2>Not sure which package fits?</h2>
+      <p>Book a free 30-minute call. We'll talk through your stack and I'll tell you honestly what you need.</p>
+      <div class="cta-buttons">
+        <a href="https://cal.com/ihsanozlu/free-30-min-consultation" class="btn btn-primary">Book a free call →</a>
+        <a href="/apps" class="btn btn-outline">See what I've built</a>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>
