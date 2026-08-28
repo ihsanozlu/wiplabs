@@ -1,9 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { apps } from '../data/apps.js';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://wiplabs.app/support/#contact",
+  name: "WIPLabs Support",
+  url: "https://wiplabs.app/support/",
+  description: "Support, privacy policies and terms of use for WIPLabs apps.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "WIPLabs",
+    url: "https://wiplabs.app/",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "hello@wiplabs.app",
+      availableLanguage: ["English", "Turkish"],
+    },
+  },
+  significantLink: apps.map((a) => `https://wiplabs.app/apps/${a.slug}/`),
+};
 ---
 
-<BaseLayout title="Support" description="Get support for WIPLabs apps.">
+<BaseLayout title="Support" description="Get support for WIPLabs apps." schema={schema}>
   <style>
     .support-page { padding: 4rem 0; }
     .support-page h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.75rem; }

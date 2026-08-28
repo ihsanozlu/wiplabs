@@ -84,12 +84,44 @@ const steps = [
   { num: "03", title: "Pay & I start", desc: "50% upfront via Stripe. Work starts immediately. You'll get regular updates throughout." },
   { num: "04", title: "Delivery + handoff", desc: "Code in GitHub, docs in Notion, and a walkthrough call. Includes 7 days of bug fixes after delivery." },
 ];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://wiplabs.app/services/#service",
+  name: "WIPLabs — DevOps & Platform Engineering Services",
+  url: "https://wiplabs.app/services/",
+  description: "Fixed-price DevOps and Platform Engineering services: Kubernetes audits, CI/CD pipelines, Terraform infrastructure, and monitoring stacks.",
+  provider: {
+    "@type": "Person",
+    name: "İhsan Özlü",
+    jobTitle: "Senior DevOps Engineer",
+    url: "https://wiplabs.app/about/",
+  },
+  areaServed: "Worldwide",
+  serviceType: "DevOps and Platform Engineering consulting",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Fixed-price DevOps packages",
+    itemListElement: packages.map((p) => ({
+      "@type": "Offer",
+      price: p.price.replace(/[$,]/g, ""),
+      priceCurrency: "USD",
+      itemOffered: {
+        "@type": "Service",
+        name: p.name,
+        description: p.tagline,
+      },
+    })),
+  },
+};
 ---
 
 <BaseLayout
   title="Services"
   description="Fixed-price DevOps & Platform Engineering services. Kubernetes audits, CI/CD pipelines, Terraform infrastructure, and monitoring stacks — delivered in days, not months."
   keywords="DevOps consulting, Kubernetes audit, CI/CD setup, Terraform infrastructure, Azure DevOps, platform engineering, freelance DevOps engineer Istanbul"
+  schema={schema}
 >
   <style>
     /* HERO */
